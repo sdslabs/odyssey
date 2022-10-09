@@ -8,6 +8,9 @@ from django.http import HttpResponse, JsonResponse
 from .serializers import TaskSerializer
 # Task model
 from .models import Task
+from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
+from allauth.socialaccount.providers.oauth2.client import OAuth2Client
+from dj_rest_auth.registration.views import SocialLoginView
 
 @csrf_exempt
 def tasks(request):
@@ -61,3 +64,9 @@ def task_detail(request, pk):
         task.delete() 
         # return a no content response.
         return HttpResponse(status=204) 
+
+class GitHubLogin(SocialLoginView):
+    adapter_class = GitHubOAuth2Adapter
+    callback_url = CALLBACK_URL_YOU_SET_ON_GITHUB
+    client_class = OAuth2Client
+    
