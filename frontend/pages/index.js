@@ -1,7 +1,9 @@
+import Timeline from "../components/Timeline";
+
 export default function Home() {
   return (
     <div className="center">
-      <h2>Home Page</h2>
+      <Timeline />
     </div>
   );
 }
