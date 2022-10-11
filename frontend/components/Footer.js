@@ -14,7 +14,7 @@ class Footer extends Component {
         <div>
             HOME
         </div>
-        <div className="footer-3">
+        <div className="footer-social">
             <div className="social">
               <div>Social Media</div>
               <div className="social-icons">
