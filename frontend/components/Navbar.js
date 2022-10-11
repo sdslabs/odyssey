@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import NavItem from "./NavItem";
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
+  { text: "Event", href: "/event" },
+  { text: "Leaderboard", href: "/leaderboard" },
+  { text: "About", href: "/about" },
+  { text: "Participation", href: "/participation" },
+  { text: "Profile", href: "/profile" }
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
@@ -17,7 +19,7 @@ const Navbar = () => {
       <nav className={`nav`}>
         <Link href={"/"}>
           <a>
-            <h1 className="logo">Odyssey</h1>
+            <img src="/images/logo.svg"></img>
           </a>
         </Link>
         <div
