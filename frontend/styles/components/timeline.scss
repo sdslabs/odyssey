@@ -1,0 +1,66 @@
+@import url('http://fonts.cdnfonts.com/css/bankgothic-md-bt');
+
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 40px 0;
+}
+
+.timeline-container::after {
+  background-color: #E9456088;
+  content: '';
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 6%;
+  width: 88%;
+  height: 20px;
+  z-index: 10;
+}
+
+.timeline-active {
+  background: rgb(29,15,68);
+  background: linear-gradient(90deg, rgba(29,15,68,1) 0%, rgba(61,14,61,1) 100%);
+  background: rgb(80,41,189);
+  background: linear-gradient(90deg, rgba(80,41,189,0.69) 0%, rgba(129,41,82,1) 59%, rgba(233,69,96,1) 100%);
+  content: '';
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 6%;
+  width: 29.145%;
+  height: 20px;
+  z-index: 10;
+  border-radius: 48.41px;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+  position: relative;
+  margin: 10px 0;
+  width: 50%;
+}
+
+.timeline-item-content{
+  text-align: center; 
+  font-family: 'BankGothic Md BT',sans-serif !important;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
+  .timeline-item-date {
+    padding-bottom: 15px;
+    width: 135px;
+  }
+
+  .timeline-item-logo{
+    position: relative;
+    z-index: 1000;
+  }
+
+  .timeline-item-text {
+    padding-top: 15px;
+    width: 135px;
+  }
+}
+

@@ -1,3 +1,5 @@
+import Timeline from "../components/Timeline";
+
 export default function Home() {
   return (
     <div className="placard">
@@ -18,6 +20,7 @@ export default function Home() {
       <div>
         <img src="/images/home-illus.svg" alt="Odyssey" />
       </div>
+      <Timeline />
     </div>
   );
 }
