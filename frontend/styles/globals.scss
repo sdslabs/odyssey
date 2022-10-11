@@ -1,42 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
-@import "./components/timeline.scss";
+@import 'Home.module';
+@import "./components/timeline";
 
 * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  font-family: 'BankGothic Md BT'; 
+  background-color: black;
+  color: azure;
 }
+
 a{
   text-decoration: none;
   color: inherit;
 }
+
 header{
   position: sticky;
   z-index: 30;
   top: 0;
 }
+
 nav{
   display: flex;
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: transparent;
   font-family: 'Work Sans', sans-serif;
-
 }
+
 .nav__menu-bar{
   display: flex;
   flex-direction: column;
   row-gap: 6px;
   cursor: pointer;
 }
+
 .nav__menu-bar div{
   width: 40px;
   height: 4px;
   background-color: black;
   border-radius: 2px;
 }
+
 .nav__menu-list{
   display: flex;
   flex-direction: column;
@@ -48,11 +57,13 @@ nav{
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #f1f1f1;
+  background-color: transparent;
 }
+
 .nav__menu-list.active{
   right: 0;
 }
+
 .nav__link{
   font-size: 18px; 
   position: relative;
@@ -69,6 +80,7 @@ nav{
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (min-width: 768px) {
   .nav__menu-bar{
     display: none;
@@ -95,4 +107,22 @@ nav{
   .nav__link:hover:before{
    width: 100%;
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
 }
