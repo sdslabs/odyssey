@@ -4,15 +4,31 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <div>
-            <p>Odyssey</p>
+        <div className="footer-1">
+            <div className="footer-logo">
+              <img src="../public/logo.svg>"></img>
+              <p>Odyssey</p>
+            </div>
+            <div>some caption</div>
         </div>
         <div>
-            Home
+            HOME
         </div>
-        <div>
-            <div>Social Media</div>
-            <div>Contact Us</div>
+        <div className="footer-3">
+            <div className="social">
+              <div>Social Media</div>
+              <div className="social-icons">
+                <img></img>
+                <img></img>
+              </div>
+            </div>
+            <div className="contact">
+              <div>Contact Us</div>
+              <div className="social-icons">
+                <img></img>
+                <img></img>
+              </div>
+            </div>
         </div>
       </div>
     );
