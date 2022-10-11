@@ -4,10 +4,11 @@ import NavItem from "./NavItem";
 import { signIn, signOut, useSession, SessionProvider } from 'next-auth/react'
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
-  { text: "Sign In", href: "/auth/signin" },
+  { text: "Event", href: "/event" },
+  { text: "Leaderboard", href: "/leaderboard" },
+  { text: "About", href: "/about" },
+  { text: "Participation", href: "/participation" },
+  { text: "Profile", href: "/profile" }
 ];
 
 const Navbar = () => {
@@ -21,7 +22,7 @@ const Navbar = () => {
       <nav className={`nav`}>
         <Link href={"/"}>
           <a>
-            <h1 className="logo">Odyssey</h1>
+            <img src="/images/logo.svg"></img>
           </a>
         </Link>
         <div
