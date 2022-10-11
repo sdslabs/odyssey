@@ -18,15 +18,15 @@ class Footer extends Component {
             <div className="social">
               <div>Social Media</div>
               <div className="social-icons">
-                <img></img>
-                <img></img>
+                <img src="/images/instagram.svg"></img>
+                <img src="/images/github.svg"></img>
               </div>
             </div>
             <div className="contact">
               <div>Contact Us</div>
               <div className="social-icons">
-                <img></img>
-                <img></img>
+                <img src="/images/email.svg"></img>
+                <img src="/images/instagram.svg"></img>
               </div>
             </div>
         </div>
