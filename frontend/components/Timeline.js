@@ -78,11 +78,14 @@ const TimelineItem = ({ data }) => (
 
 const Timeline = () => 
     timelineData.length > 0 && (
-        <div className="timeline-container">
-            {timelineData.map((data, idx) => (
-                <TimelineItem data={data} key={idx} />
-            ))}
-            <div className="timeline-active" width={100*computeTimelineLength(100) * 0.88 + "%"}/>
+        <div>
+            <h1>Timeline</h1>
+            <div className="timeline-container">
+                {timelineData.map((data, idx) => (
+                    <TimelineItem data={data} key={idx} />
+                ))}
+                <div className="timeline-active" width={100*computeTimelineLength(100) * 0.88 + "%"}/>
+            </div>
         </div>
     );
 
