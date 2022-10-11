@@ -1,11 +1,14 @@
-import Value from "./Value";
+import TextSmall from "./TextDash";
 
 const Values = ({}) => {
     return (
-    <div className="values">
-        <Value text="helo"/>
+    <div className="about">
+        <p>Values</p>
+        <TextSmall text="helo"/>
+        <TextSmall text="helo"/>
+        <TextSmall text="helo"/>
     </div> 
     );
-    };
+};
 
 export default Values;
