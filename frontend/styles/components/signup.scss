@@ -1,14 +1,14 @@
 .signup{
     box-sizing: border-box;
-    width: 1061.84px;
-    height: 719.81px;
+    width: 66rem;
+    height: 45rem;
     background: rgba(255, 255, 255, 0.1);
-    border: 3.86079px solid #FFFFFF;
+    border: 0.24rem solid #FFFFFF;
     //backdrop-filter: blur(4.82599px);
 
     /* Note: backdrop-filter has minimal browser support */
-    border-radius: 17.3736px;
-    //filter: blur(15.9258px);   
+    border-radius: 1rem;
+    //filter: blur(15.9258px);
     text-align: center;
     vertical-align: middle;
     display: flex;
@@ -18,16 +18,48 @@
 
 .input{
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    font-size: 28px;
-    line-height: 27.35px;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1.7rem;
     font-family: "BankGothic Md BT";
+    height: 2.81rem;
+    width: 33.4rem;
+    padding-left: 1.56rem;
+    margin-left: 1.56rem; 
+}
+
+.dropDown{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    border: none;
+    padding-left: 1rem;
+    font-size: 1.75rem;
+    line-height: 1.7rem;
+    font-family: "BankGothic Md BT";
+    height: 2.81rem;
 }
 
 .avatar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 1.625rem;
+    align-items: center;
+}
+
+.avatar img{
+    display: inline;
+    margin: 0 auto;
+    width: auto;
+}
+
+.imageCropper{
+    width: 10.43rem;
+    height: 10.43rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .labels{
@@ -44,16 +76,17 @@
 .form-floating{
     display: flex;
     flex-direction: row;
-    font-size: 28px;
-    line-height: 27.35px;
+    font-size: 1.75rem;
+    line-height: 1.7rem;
     font-family: "BankGothic Md BT";
     justify-content: space-between;
+    margin: 26px;
 }
 
 .userHandle{
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .actualName{
-    font-size: 32px;
+    font-size: 2rem;
 }

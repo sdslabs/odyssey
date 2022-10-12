@@ -3,12 +3,14 @@ const SignUpForm = ()=>{
         <div className="signup">
             <form>
                 <div className="avatar">
-                    <img />
+                    <div className="imageCropper">
+                        <img src="/images/pfp.jpg" alt="Avatar"/>
+                    </div>
                     <div className="labels">
                         <label className="userHandle">USERHANDLE</label>
                         <label className="actualName">ACTUAL NAME</label>
                     </div>
-                    <select className="input">
+                    <select className="dropDown">
                         <option>DESIGNER</option>
                         <option>DEVELOPER</option>
                     </select>
