@@ -1,0 +1,58 @@
+@import url('http://fonts.cdnfonts.com/css/bankgothic-md-bt');
+
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 40px 0;
+}
+
+.timeline-container::after {
+  background-color: #E9456088;
+  content: '';
+  position: absolute;
+  top: calc(50% - 12.5px);
+  left: 7%;
+  width: calc(13% * 6);
+  height: 20px;
+  z-index: 10;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  position: relative;
+  margin: 10px 0;
+  width: 13%;
+}
+
+.timeline-item-content{
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  font-family: 'BankGothic Md BT',sans-serif !important;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  align-items: center;
+
+  .timeline-item-date {
+    padding-bottom: 15px;
+    width: 135px;
+  }
+
+  .timeline-item-logo{
+    background-color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    z-index: 100;
+    shape-outside: circle();
+    clip-path: circle();
+  }
+
+  .timeline-item-text {
+    padding-top: 15px;
+    width: 135px;
+  }
+}
+
