@@ -21,13 +21,12 @@ from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # for tasks
     path('api/', include('odyssey.urls')),
     path('tasks/', views.tasks),
     path('tasks/<int:pk>/', views.task_detail),
     path('', TemplateView.as_view(template_name="index.html")),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view()),
-    path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('api/auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls'))
 ]
