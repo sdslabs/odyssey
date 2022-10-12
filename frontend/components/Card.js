@@ -1,12 +1,17 @@
-const Card = ({}) => {
+const Card = ({CardData}) => {
     return (
-    <div className="card">
-        <div className="card__container">
-          <h4><b>Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</b></h4>
-          <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
-          <button>Read More</button>
+    <>
+      {CardData.map((Card) =>(
+        <div className="card">
+            <div className="card__container">
+              <h4><b>{Card.repoName} - {Card.tag}</b></h4>
+              <p>{Card.issueTitle}</p>
+              <p>Mentored by - {Card.mentor}</p>
+              {Card.claim == false ? <button>Read More</button> : <p>Assigned to - {Card.assignee}</p>}
+            </div>
         </div>
-    </div> 
+      ))}
+    </> 
     );
   };
 
