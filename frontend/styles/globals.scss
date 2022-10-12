@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
 }
+body{
+  background-color: black;
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -61,7 +64,6 @@ nav{
 }
 
 .center{
-  background-color: black;
   min-height: 600px;
   display: flex;
   justify-content: center;
