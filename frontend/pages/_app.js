@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/globals.scss";
 import { SessionProvider } from 'next-auth/react';
 
