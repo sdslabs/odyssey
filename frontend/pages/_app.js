@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.scss";
 import "../styles/About.scss";
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     <SessionProvider session={pageProps.session}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </SessionProvider>
   );
 }
