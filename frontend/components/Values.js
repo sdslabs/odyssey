@@ -1,12 +1,20 @@
 import TextSmall from "./TextDash";
+import React, { useState } from "react";
 
 const Values = ({}) => {
+    const [listVisible, setDivVisible] = useState(false);
+    const classNameGenerator = (...classes) => {
+        return classes.join(" ");
+      };
+
     return (
     <div className="about">
-        <p>Values</p>
-        <TextSmall text="helo"/>
-        <TextSmall text="helo"/>
-        <TextSmall text="helo"/>
+        <p onClick={() => setDivVisible(!listVisible)}>Values</p>
+        <div className={classNameGenerator("list1") + " " + listVisible}>
+            <TextSmall text="helo"/>
+            <TextSmall text="helo"/>
+            <TextSmall text="helo"/>
+        </div>
     </div> 
     );
 };

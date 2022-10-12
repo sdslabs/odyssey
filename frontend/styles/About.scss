@@ -4,6 +4,10 @@
     row-gap: 10px;
     margin-left: 3rem;
 
+    .false{
+        display: none;
+    }
+
     .textsmall{
         display: flex;
         flex-direction: row;

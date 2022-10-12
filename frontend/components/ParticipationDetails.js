@@ -1,12 +1,19 @@
 import TextDash from "./TextDash";
+import React, { useState } from "react";
 
 const ParticipationDetails = ({}) => {
+    const [listVisible, setDivVisible] = useState(false);
+    const classNameGenerator = (...classes) => {
+        return classes.join(" ");
+    };
     return (
     <div className="about">
-        <p>Participation Details</p>
+        <p onClick={() => setDivVisible(!listVisible)}>Participation Details</p>
+        <div className={classNameGenerator("list1") + " " + listVisible}>
         <TextDash text="helo"/>
         <TextDash text="helo"/>
         <TextDash text="helo"/>
+        </div>
     </div> 
     );
 };
