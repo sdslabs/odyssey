@@ -4,7 +4,9 @@ import React, { useState } from "react";
 
 const Resources = ({}) => {
     const [listVisible, setDivVisible] = useState(false);
-    const [list2Visible, setDiv2Visible] = useState(false);
+    const [list2VisibleA, setDiv2VisibleA] = useState(false);
+    const [list2VisibleB, setDiv2VisibleB] = useState(false);
+    const [list2VisibleC, setDiv2VisibleC] = useState(false);
     const classNameGenerator = (...classes) => {
         return classes.join(" ");
     };
@@ -13,21 +15,27 @@ const Resources = ({}) => {
     <div className="about">
         <p onClick={() => setDivVisible(!listVisible)}>Resources For Beginners</p>
         <div className={classNameGenerator("list1") + " " + listVisible}>
-        <div onClick={() => setDiv2Visible(!list2Visible)}>
+        <div onClick={() => setDiv2VisibleA(!list2VisibleA)}>
         <TextPlus text="helo"/>
-        <div className={classNameGenerator("textcirclecont")+" "+ list2Visible}>
+        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleA}>
             <TextCircle text="Lorem ipsum"/>
             <TextCircle text="Lorem ipsum"/>
             <TextCircle text="Lorem ipsum"/>
         </div>
         </div>
-        <div onClick={() => setDiv2Visible(!list2Visible)}>
+        <div onClick={() => setDiv2VisibleB(!list2VisibleB)}>
         <TextPlus text="helo"/>
-        
+        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleB}>
+            <TextCircle text="Lorem ipsum"/>
+            <TextCircle text="Lorem ipsum"/>
         </div>
-        <div onClick={() => setDiv2Visible(!list2Visible)}>
+        </div>
+        <div onClick={() => setDiv2VisibleC(!list2VisibleC)}>
         <TextPlus text="helo"/>
-        
+        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleC}>
+            <TextCircle text="Lorem ipsum"/>
+            <TextCircle text="Lorem ipsum"/>
+        </div>
         </div>
         </div>
     </div> 
