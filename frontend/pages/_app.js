@@ -1,10 +1,12 @@
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import EventCard from "../components/EventCard";
-import "../styles/globals.scss";
+import Footer from "../components/Footer";
+import "../styles/globals.sscss";
 import {useState} from 'react';
 
 
+import { SessionProvider } from 'next-auth/react';
 
 function MyApp({ Component, pageProps }) {
   
@@ -35,12 +37,13 @@ function MyApp({ Component, pageProps }) {
     }
   ])
   return (
-    <>
+    <SessionProvider session={pageProps.session}>
       <Navbar />
       <Card CardData={CardData}/>
       <EventCard />
       <Component {...pageProps} />
-    </>
+      <Footer />
+    </SessionProvider>
   );
 }
 
