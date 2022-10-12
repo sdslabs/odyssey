@@ -11,5 +11,49 @@
     //filter: blur(15.9258px);   
     text-align: center;
     vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
+.input{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 28px;
+    line-height: 27.35px;
+    font-family: "BankGothic Md BT";
+}
+
+.avatar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainForm{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-floating{
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    line-height: 27.35px;
+    font-family: "BankGothic Md BT";
+    justify-content: space-between;
+}
+
+.userHandle{
+    font-size: 40px;
+}
+
+.actualName{
+    font-size: 32px;
+}

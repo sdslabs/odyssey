@@ -5,8 +5,8 @@ const SignUpForm = ()=>{
                 <div className="avatar">
                     <img />
                     <div className="labels">
-                        <label>USERHANDLE</label>
-                        <label>ACTUAL NAME</label>
+                        <label className="userHandle">USERHANDLE</label>
+                        <label className="actualName">ACTUAL NAME</label>
                     </div>
                     <select className="input">
                         <option>DESIGNER</option>
