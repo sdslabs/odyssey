@@ -48,7 +48,6 @@ function computeTimelineLength() {
             break;
         }
     }
-    console.log(i);
 
     return i / 6;
 }
@@ -84,7 +83,21 @@ const Timeline = () =>
                 {timelineData.map((data, idx) => (
                     <TimelineItem data={data} key={idx} />
                 ))}
-                <div className="timeline-active" width={100*computeTimelineLength(100) * 0.88 + "%"}/>
+                <div className="timeline-active" />
+                <style jsx>{`
+                    .timeline-active {
+                      color: blue;
+                      background: linear-gradient(90deg, rgba(80,41,189,0.69) 0%, rgba(129,41,82,0.79) 59%, rgba(233,69,96,1) 100%) ;
+                      content: '';
+                      position: absolute;
+                      top: calc(50% - 12.5px);
+                      left: 7%;
+                      width: ${100 * computeTimelineLength(100) * 0.78}%;
+                      height: 20px;
+                      z-index: 10;
+                      border-radius: 48.41px;
+                    }
+                  `}</style>
             </div>
         </div>
     );
