@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 
-const Profile = ({uname,aname,eno,contact,email,github}) => {
+const Profile = ({uname,aname,role,eno,contact,email,github}) => {
     return (
         <div className="profile-card">
             <div className='profile-container'>
                 <p className='username'>{uname}</p>
                 <p className='actualname'>{aname}</p>
+                <p className='role'>{role}</p>
             <div className='image'><img class="userimage" src='/images/test_user.png' /></div>
             <hr className="line" />
             <img className="edit" src="images/edit.svg" />
@@ -25,6 +26,7 @@ const Profile = ({uname,aname,eno,contact,email,github}) => {
 Profile.defaultProps={
     uname: "USERNAME",
     aname: "ACTUAL NAME",
+    role: "DEVELOPER",
     eno: "Lorem Ipsum",
     contact: "Lorem Ipsum",
     email: "Lorem Ipsum",
