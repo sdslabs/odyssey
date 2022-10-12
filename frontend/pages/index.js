@@ -1,4 +1,5 @@
 import HomePage from "../components/HomePage";
+import Profile from "../components/Profile";
 import Timeline from "../components/Timeline";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <HomePage />
       <Timeline />
+      <Profile />
     </div>
   );
 }
