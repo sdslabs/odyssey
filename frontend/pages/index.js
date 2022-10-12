@@ -9,7 +9,11 @@ export default function Home() {
           <h1>Lorem ipsum dolor sit</h1>
         </div>
         <div>
-          <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+          <p>
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum
+            dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
+            ametLorem ipsum dolor sit amet
+          </p>
         </div>
         <div>
           <button>Lorem Ipsum</button>

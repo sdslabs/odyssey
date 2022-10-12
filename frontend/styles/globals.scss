@@ -7,10 +7,14 @@
   outline: none;
   box-sizing: border-box;
   font-family: 'BankGothic Md BT'; 
-  background-color: black;
   color: azure;
 }
 
+#__next{
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 a{
   text-decoration: none;
   color: inherit;
