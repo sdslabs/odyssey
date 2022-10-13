@@ -1,12 +1,6 @@
-from rest_framework import routers,serializers,viewsets
-from .models import Task, CustomUserModel
+from .models import CustomUserModel
 from rest_framework.serializers import ModelSerializer
 from django.conf import settings
-
-class TaskSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Task
-        fields = ['id', 'title', 'description', 'completed', 'created_at']
 
 class CustomUserModelSerializer(ModelSerializer):
     class Meta:
