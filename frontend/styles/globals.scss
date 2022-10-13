@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
 @import './modules/Home.scss';
+@import "./modules/timeline";
+@import "./modules/footer.scss";
+@import "./components/signup.scss";
+@import './modules/Home.scss';
 @import "./modules/timeline.scss";
 @import "./modules/footer.scss";
 @import './modules/About.scss';
 @import './modules/Card.scss';
+@import './modules/Profile.scss';
+@import './modules/repo.scss';
+@import './modules/userpanel.scss';
 
 * {
   margin: 0;
