@@ -2,6 +2,8 @@
 @import 'Home.module';
 @import "./components/timeline";
 @import "./components/footer.scss";
+@import "./components/LoginSignupButton.scss";
+@import "./components/signoutButton.scss";
 
 * {
   margin: 0;
@@ -35,7 +37,7 @@ header{
 nav{
   display: flex;
   padding: 16px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: transparent;
   font-family: 'Work Sans', sans-serif;
@@ -146,20 +148,7 @@ nav{
   }
 }
 
-// .footer {
-//   display: flex;
-//   flex-direction: row;
-//   align-content: space-between;
-//   justify-content: space-between;
-//   margin: auto;
-// }
-
-// .footer-social {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .social-icons {
-//   display: flex;
-//   flex-direction: row;
-// }
+.nav {
+  font-size: 22px;
+  width: 100vw;
+}

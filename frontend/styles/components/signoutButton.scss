@@ -1,0 +1,29 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 10.75rem;
+}
+
+.profile_button {
+    height: 2.875rem;
+    border: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid white;
+    background: url("../../public/images/background.svg");
+    font-size: 20px;
+}
+
+.logout_button {
+    height: 2.875rem;
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: url("../../public/images/background.svg");
+    font-size: 20px;
+}
+
+.signout {
+    border: 2px solid rgb(209, 209, 209);
+    border-radius: 8px;
+}
