@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
           ))}
           {!session && (
-            <button className="login_signupButton" onClick={() => signIn()}>LOGIN / SIGNUP</button>
+            <button className="login_signupButton" onClick={() => signIn('github')}>LOGIN / SIGNUP</button>
           )}
           {session && <button className="signout" onClick={() => signOut()}>USERNAME</button>}
         </div>
