@@ -1,8 +1,10 @@
 import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react";
+import SignUpForm from "../components/SignUpForm";
 
 function signin({ providers }) {
   return (
     <div>
+      <SignUpForm />
       {Object.values(providers).map((provider) => {
         return (
           <div key={provider.name}>

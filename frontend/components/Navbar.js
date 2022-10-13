@@ -5,7 +5,7 @@ import { signIn, signOut, useSession, SessionProvider } from "next-auth/react";
 import DropDown from "./Navbar/UsernameDropdown";
 
 const MENU_LIST = [
-  { text: "Event", href: "/event" },
+  { text: "Events", href: "/events" },
   { text: "Leaderboard", href: "/leaderboard" },
   { text: "About", href: "/about" },
   { text: "Participation", href: "/participation" },
