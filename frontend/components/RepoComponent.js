@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types'
 
-const Repo=( {Card} )=>{
+const Repo=( {description, mentor} )=>{
     return (
         <div class="repobox">
             <div class="description">
-            <h4><b>{Card.repoName} - {Card.tag}</b></h4>
-              <p>{Card.issueTitle}</p>
+                {description}
             </div>
             <div class="mentor">
-                Mentored by - {Card.mentor}
-                {Card.claim == false ? <button>Read More</button> : <p>Assigned to - {Card.assignee}</p>}
+                MENTOR: {mentor}
             </div>
         </div>
     )
 }
 
-/* Repo.defaultProp={
+Repo.defaultProp={
     description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum ",
     mentor: "VANSH UPPAl"
 }
@@ -23,5 +21,5 @@ const Repo=( {Card} )=>{
 Repo.defaultProp={
     description: PropTypes.string,
     mentor: PropTypes.string
-} */
+}
 export default Repo
