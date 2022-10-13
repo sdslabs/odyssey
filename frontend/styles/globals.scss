@@ -11,6 +11,8 @@
 @import './modules/Profile.scss';
 @import './modules/repo.scss';
 @import './modules/userpanel.scss';
+@import "./components/LoginSignupButton.scss";
+@import "./components/signoutButton.scss";
 
 * {
   margin: 0;
@@ -48,7 +50,7 @@ header{
 nav{
   display: flex;
   padding: 16px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: transparent;
   font-family: 'Work Sans', sans-serif;
