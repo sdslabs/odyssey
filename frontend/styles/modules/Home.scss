@@ -117,6 +117,30 @@
   align-content: space-between;
 }
 
+.placard-icons {
+ 
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.placard-icons-instagram {
+  
+  width: 2rem;
+  padding-bottom: 1rem;
+  margin: 0 ;
+}
+.placard-icons-github {
+  
+  width: 2rem;
+  padding-top: 1rem;
+  margin: 0 ;
+}
+
+
+
 .odysseyimage {
   width: 19rem;
   height: 19rem;
