@@ -12,10 +12,12 @@ class CustomUserModelSerializer(ModelSerializer):
     class Meta:
         model = CustomUserModel
         fields = [
-            'userId',
+            'name',
             'username',
+            'field',
+            'enrollmentNo',
+            'contactNo',
             'email',
-            'password',
         ]
 
     def create(self, validated_data):

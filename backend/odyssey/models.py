@@ -1,3 +1,4 @@
+from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from uuid import uuid4
@@ -42,8 +43,12 @@ class CustomUserModelManager(BaseUserManager):
 
 class CustomUserModel(AbstractBaseUser, PermissionsMixin):
     userId = models.CharField(max_length = 32, default = uuid4, primary_key = True, editable = False)
+    name = models.CharField(max_length=50, null = True)
     username = models.CharField(max_length=32, unique=True, null = False, blank = False)
     email = models.EmailField(max_length = 100, null = False, blank = False)
+    enrollmentNo = models.CharField(max_length = 8)
+    contactNo = models.CharField(max_length = 10)
+    field = models.CharField(max_length = 20)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
