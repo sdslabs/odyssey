@@ -3,9 +3,10 @@ const HomePage = () => {
   return (
     <div className="placard">
       <div className="placard-icons">
-	  	<img className="placard-icons-instagram" src="/images/instagram2.svg" alt="instagram" />
-	    <img className="placard-icons-github" src="/images/github2.svg" alt="github" />	
-	  </div>
+        <img className="placard-icons-instagram" src="/images/instagram2.svg" alt="instagram" />
+        <img className="placard-icons-github" src="/images/github2.svg" alt="github" />	
+      </div>
+      
       <div className="placard-text">
         <div>
           <h1>Lorem ipsum dolor sit</h1>
