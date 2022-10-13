@@ -2,19 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from uuid import uuid4
 
-# Create your models here.
-class Task(models.Model):
-    #title
-    title = models.CharField(max_length=100)
-    description = models.TextField(blank=True, null=True) #description
-    completed = models.BooleanField(default=False)
-    #completed
-    created_at = models.DateTimeField(auto_now_add=True) #created_at
-
-    def __str__(self):
-        #return the task title
-        return self.title
-
 class CustomUserModelManager(BaseUserManager):
     def create_user(self, username, email, password=None):
         user = self.model(
@@ -42,8 +29,12 @@ class CustomUserModelManager(BaseUserManager):
 
 class CustomUserModel(AbstractBaseUser, PermissionsMixin):
     userId = models.CharField(max_length = 32, default = uuid4, primary_key = True, editable = False)
+    name = models.CharField(max_length=50, null = True)
     username = models.CharField(max_length=32, unique=True, null = False, blank = False)
     email = models.EmailField(max_length = 100, null = False, blank = False)
+    enrollmentNo = models.CharField(max_length = 8)
+    contactNo = models.CharField(max_length = 10)
+    field = models.CharField(max_length = 20)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
@@ -60,3 +51,14 @@ class CustomUserModel(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         verbose_name = 'Custom User'
+
+
+class IssueModel(models.Model):
+    issue = models.CharField(max_length = 100, primary_key = True, editable = False)
+    mentorName = models.CharField(max_length = 50)
+    mentorId = models.CharField(max_length = 32)
+    assigneeName = models.CharField(max_length = 50)
+    assigneeId = models.CharField(max_length = 32)
+
+    class Meta:
+        verbose_name = 'Issue'
