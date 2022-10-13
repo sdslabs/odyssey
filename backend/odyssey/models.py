@@ -58,8 +58,8 @@ class IssueModel(models.Model):
     issue = models.CharField(max_length = 100, primary_key = True, editable = True)
     mentorName = models.CharField(max_length = 50)
     mentorId = models.CharField(max_length = 32)
-    assigneeName = models.CharField(max_length = 50,null=True,blank=True)
-    assigneeId = models.CharField(max_length = 32,null=True,blank=True)
+    assigneeName = models.CharField(max_length = 50, null = True, blank = True)
+    assigneeId = models.CharField(max_length = 32, null = True, blank = True)
 
     class Meta:
         verbose_name = 'Issue'
