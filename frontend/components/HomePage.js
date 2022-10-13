@@ -17,7 +17,7 @@ const HomePage = () => {
             ametLorem ipsum dolor sit amet
           </p>
         </div>
-        <div>
+        <div className="timeline-button">
           <Button />
         </div>
       </div>
