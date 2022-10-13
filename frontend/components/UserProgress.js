@@ -3,11 +3,11 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 const UserProgress = ({ progress, rank}) =>{
     return(
-        <div class="progresspanel">
-            <div class="progress">
+        <div className="progresspanel">
+            <div className="progress">
             PROGRESS
             </div>
-            <div class="progressbar">
+            <div className="progressbar">
             <CircularProgressbar
              value={progress}  
              text={`${progress}%`}
@@ -17,7 +17,7 @@ const UserProgress = ({ progress, rank}) =>{
                 trailColor: '#74303C',
             })}/>
             </div>
-            <div class="rank">
+            <div className="rank">
             {rank} RANK
             </div>
     </div>

@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from uuid import uuid4
@@ -54,11 +55,11 @@ class CustomUserModel(AbstractBaseUser, PermissionsMixin):
 
 
 class IssueModel(models.Model):
-    issue = models.CharField(max_length = 100, primary_key = True, editable = False)
+    issue = models.CharField(max_length = 100, primary_key = True, editable = True)
     mentorName = models.CharField(max_length = 50)
     mentorId = models.CharField(max_length = 32)
-    assigneeName = models.CharField(max_length = 50)
-    assigneeId = models.CharField(max_length = 32)
+    assigneeName = models.CharField(max_length = 50,null=True,blank=True)
+    assigneeId = models.CharField(max_length = 32,null=True,blank=True)
 
     class Meta:
         verbose_name = 'Issue'

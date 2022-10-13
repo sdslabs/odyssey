@@ -1,3 +1,4 @@
 from django.contrib import admin
+from odyssey.models import IssueModel
 
-# Register your models here.
+admin.site.register(IssueModel)

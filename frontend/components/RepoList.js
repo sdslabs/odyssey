@@ -1,17 +1,15 @@
-import Repo from './RepoComponent'
+import Repo from "./RepoComponent";
 
-const ReposToContribute=({list})=>{
-    return (
-            <div class="repodialogue">
-                <div class="scroll">
-            {list.map((Card) => {
-                return (
-                    <Repo Card={Card} />
-                );
-            })}
-            </div>
-        </div>
-    )
-}
+const ReposToContribute = ({ list }) => {
+  return (
+    <div class="repodialogue">
+      <div class="scroll">
+        {list.map((Card) => {
+          return <Repo Card={Card} />;
+        })}
+      </div>
+    </div>
+  );
+};
 
-export default ReposToContribute
+export default ReposToContribute;
