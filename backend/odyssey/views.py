@@ -68,6 +68,6 @@ def task_detail(request, pk):
 class GitHubLogin(SocialLoginView):
     authentication_classes = []
     adapter_class = GitHubOAuth2Adapter
-    callback_url = 'http://localhost:3000'
+    callback_url = 'http://localhost:3000/'
     client_class = OAuth2Client
     
