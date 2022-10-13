@@ -1,11 +1,12 @@
-import UserProgress from "../components/UserProgress";
+import HomePage from "../components/HomePage";
+import Timeline from "../components/Timeline";
 
 export default function Home() {
+
   return (
-    <>    <div className="center">
-      <h2>Home Page</h2>
+    <div>
+      <HomePage />
+      <Timeline />
     </div>
-    <UserProgress progress={25} rank={3}/>
-    </>
   );
 }

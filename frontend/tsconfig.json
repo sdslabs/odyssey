@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "components/NavItem.js", "components/Navbar.js", "components/Footer.js", "pages/api/hello.js", "pages/events/index.js", "pages/leaderboard/index.js", "pages/participation/index.js", "pages/profile/index.js", "pages/_app.js", "pages/index.js", "pages/signin.js", "pages/signin.js", "pages/index.js", "pages/_app.js", "pages/profile/index.js", "pages/participation/index.js", "pages/leaderboard/index.js", "pages/events/index.js", "pages/api/hello.js", "pages/api/auth/[...nextauth].js", "components/NavItem.js", "components/Footer.js", "components/Navbar.js", "pages/_app.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
