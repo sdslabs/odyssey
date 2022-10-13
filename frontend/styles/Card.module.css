@@ -1,0 +1,13 @@
+.card {
+    box-shadow: 0px 4.87248px 15.8356px 2.43624px rgba(221, 230, 243, 0.25);
+    /*effects - transition: 0.3s;*/
+    background: linear-gradient(90deg, rgba(104, 56, 236, 0.5) 0%, rgba(233, 69, 96, 0.5) 100%), linear-gradient(90deg, #6838EC 45.31%, #570A57 100%);
+    border-radius: 16px;
+    border: 2.43624px solid rgba(233, 69, 96, 0.8);
+}
+
+.container{
+    padding: something;
+}
+
+
