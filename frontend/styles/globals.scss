@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
-@import 'Home.module';
-@import "./components/timeline";
+@import './modules/Home.scss';
+@import "./modules/timeline.scss";
+@import "./modules/footer.scss";
+@import './modules/About.scss';
+@import './modules/Card.scss';
 
 * {
   margin: 0;
@@ -15,6 +18,10 @@
   background-image: url("/images/background.svg");
   background-repeat: repeat-y;
   background-size: 100%;
+  font-size: 16px;
+}
+body{
+  background-color: black;
 }
 a{
   text-decoration: none;
@@ -83,7 +90,6 @@ nav{
 }
 
 .center{
-  background-color: black;
   min-height: 600px;
   display: flex;
   justify-content: center;
@@ -161,4 +167,40 @@ nav{
 .social-icons {
   display: flex;
   flex-direction: row;
+}
+
+.searchbar {
+  margin-top: 5vw;  //remove
+  margin-left: 5vw; //remove
+  display: flex;
+  flex-direction: row;
+  width: 27rem;
+  height: 2.68rem;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: rgb(255, 255, 255);
+  color: white;
+  filter: drop-shadow(0rem 0rem 0.2rem #FFFFFF);
+}
+
+.searchIcon {
+  height: 1.562rem;
+  width: 1.562rem;
+  margin-left: 1rem;
+}
+
+.searchText {
+  width: 22rem;
+  border-width: 0rem;
+  font-weight: 100;
+  color: #FFFFFF;
+}
+
+input::placeholder {
+  font-weight: 100;
+  color: #e2e2e2;
+  font-size: 1rem;
 }

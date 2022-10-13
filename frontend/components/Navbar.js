@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
-import { signIn, signOut, useSession, SessionProvider } from "next-auth/react";
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 const MENU_LIST = [
-  { text: "Event", href: "/event" },
+  { text: "Events", href: "/events" },
   { text: "Leaderboard", href: "/leaderboard" },
   { text: "About", href: "/about" },
   { text: "Participation", href: "/participation" },
@@ -45,9 +45,7 @@ const Navbar = () => {
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
           ))}
-          {!session && (
-            <button onClick={() => signIn()}>Sign in with Github</button>
-          )}
+          {!session && <button onClick={() => signIn('github')}>Sign in with Github</button>}
           {session && <button onClick={() => signOut()}>Sign out</button>}
         </div>
       </nav>
