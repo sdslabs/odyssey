@@ -2,10 +2,10 @@ import Repo from "./RepoComponent";
 
 const ReposToContribute = ({ list }) => {
   return (
-    <div class="repodialogue">
-      <div class="scroll">
-        {list.map((Card) => {
-          return <Repo Card={Card} />;
+    <div className="repodialogue">
+      <div className="scroll">
+        {list.map((Card, i) => {
+          return <Repo Card={Card} key={i} />;
         })}
       </div>
     </div>

@@ -1,9 +1,11 @@
-import PropTypes from "prop-types";
+import { useSession } from "next-auth/react";
+const axios = require("axios").default;
 
 const Repo = ({ Card }) => {
+  const { data: session } = useSession();
   return (
-    <div class="repobox">
-      <div class="description">
+    <div className="repobox">
+      <div className="description">
         <h4>
           <b>
             {Card.repoName} - {Card.tag}
@@ -13,7 +15,7 @@ const Repo = ({ Card }) => {
           {Card.issueTitle}
         </a>
       </div>
-      <div class="mentor">
+      <div className="mentor">
         Mentored by - {Card.mentor}
         {Card.claim == false ? (
           <button
@@ -22,6 +24,7 @@ const Repo = ({ Card }) => {
               marginLeft: "auto",
               marginTop: "15px",
             }}
+            onClick={() => claimIssue(Card, session)}
           >
             Claim
           </button>
@@ -32,6 +35,17 @@ const Repo = ({ Card }) => {
     </div>
   );
 };
+
+async function claimIssue(Card, session) {
+  const response = await axios.post(
+    'http://localhost:8000/api/claim-issue/',
+    {
+      access_token: session.accessToken,
+      id_token: session.user.id,
+      issue: Card.issueUrl,
+    }
+  )
+}
 
 /* Repo.defaultProp={
     description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum ",

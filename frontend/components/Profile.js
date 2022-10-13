@@ -7,7 +7,7 @@ const Profile = ({uname,aname,role,eno,contact,email,github}) => {
                 <p className='username'>{uname}</p>
                 <p className='actualname'>{aname}</p>
                 <p className='role'>{role}</p>
-            <div className='image'><img class="userimage" src='/images/test_user.png' /></div>
+            <div className='image'><img className="userimage" src='/images/test_user.png' /></div>
             <hr className="line" />
             <img className="edit" src="images/edit.svg" />
             <p className='field' style={{top: 16.69+"rem", left: 3.438+"rem"}}>ENROLLMENT NO</p>
