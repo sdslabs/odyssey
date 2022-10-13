@@ -51,3 +51,14 @@ class CustomUserModel(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         verbose_name = 'Custom User'
+
+
+class IssueModel(models.Model):
+    issue = models.CharField(max_length = 100, primary_key = True, editable = False)
+    mentorName = models.CharField(max_length = 50)
+    mentorId = models.CharField(max_length = 32)
+    assigneeName = models.CharField(max_length = 50)
+    assigneeId = models.CharField(max_length = 32)
+
+    class Meta:
+        verbose_name = 'Issue'
