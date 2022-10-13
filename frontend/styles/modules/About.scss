@@ -1,0 +1,48 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-left: 6.375rem;
+
+    .false{
+        display: none;
+    }
+
+    .textsmall{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .textsmall p{
+        font-family: 'BankGothic Lt BT';
+        font-size: 1.375rem;
+        line-height: 135.3%;
+        letter-spacing: 0rem;
+        color: #FFFFFF;
+    }
+
+    .textmedium{
+        margin-left: 1.5rem;
+    }
+
+    .textmedium p{
+        font-family: 'BankGothic Lt BT';
+        font-size: 2.25rem;
+        line-height: 97.7%;
+        letter-spacing: -0.01125rem;
+        color: #FFFFFF;
+    }
+
+    .textcirclecont{
+        margin-left: 3rem;
+    }
+}
+
+.about p{
+    font-family: 'BankGothic Md BT';
+    font-size: 3.72rem;
+    font-style: normal;
+    letter-spacing: -0.1674rem;
+    color: #FFFFFF;
+}

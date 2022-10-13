@@ -6,27 +6,20 @@ class Footer extends Component {
       <div className="footer">
         <div className="footer-1">
             <div className="footer-logo">
-              <img src="/images/logo.svg>"></img>
-              <p>Odyssey</p>
+              <img src="/images/logo.svg"></img>
             </div>
-            <div>some caption</div>
+            <div className="footer-1_text">ODYSSEY</div>
         </div>
-        <div>
-            HOME
+        <div className="footer-text">
+        A JOURNEY TO OPEN SOURCE SOME TAGLINE IDK something related to what is going on and some lines about open source philosophy :)
         </div>
         <div className="footer-social">
-            <div className="social">
-              <div>Social Media</div>
-              <div className="social-icons">
-                <img src="/images/instagram.svg"></img>
-                <img src="/images/github.svg"></img>
-              </div>
-            </div>
             <div className="contact">
-              <div>Contact Us</div>
+              <div className="footer-social-text">Contact Us</div>
               <div className="social-icons">
-                <img src="/images/email.svg"></img>
-                <img src="/images/instagram.svg"></img>
+                <img className="icon_img" src="/images/github.svg"></img>
+                <img className="icon_img" src="/images/instagram.svg"></img>
+                <img className="icon_img" src="/images/email.svg"></img>
               </div>
             </div>
         </div>
