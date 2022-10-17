@@ -24,11 +24,6 @@
     border-radius: 50%;
 }
 hr {
-    position: absolute;
-    width: 45.125rem;
-    height: 0rem;
-    left: 3.428rem;
-    top: 15rem;
     border: 0.125rem solid rgba(255, 255, 255, 0.4);
 }
 
@@ -63,9 +58,6 @@ hr {
 }
 
 .role{
-    position: absolute;
-    left: 15.813rem;
-    top: 10.69rem;
     font-family: 'BankGothic Lt BT';
     font-style: normal;
     font-weight: 400;
@@ -75,6 +67,7 @@ hr {
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0);
     color: #cfcdcd;
+    text-align: left;
 }
 
 .field{
@@ -104,8 +97,5 @@ hr {
 }
 
 .edit{
-    position: absolute;
-    left: 45.67rem;
-    top: 3.3rem;
     background: rgba(0, 0, 0, 0);
 }
