@@ -1,9 +1,30 @@
+import axios from 'axios';
+import { useSession } from 'next-auth/react';
 import PropTypes from 'prop-types';
 import {useState} from 'react';
 
 const Profile = ({uname,aname,role,eno,contact,email,pfp})=>{
-
+    const {data:session} =useSession()
     const [editProfile,setEdit] = useState(true);
+    const [formName,setName] = useState("");
+    const [formEmail,setEmail] = useState("");
+    const [formEno,setEno] = useState("");
+    const [formContact,setContact] = useState("");
+    const [formField,setField] = useState("Developer");
+
+    async function setData() {
+        let data = {
+            access_token: session.accessToken,
+            id_token: session.user.id,
+            name: formName ? formName : aname,
+            email: formEmail ? formEmail : email,
+            enrollmentNo: formEno ? formEno : eno,
+            contactNo: formContact ? formContact : contact,
+            field: formField ? formField : field,
+        }
+        
+        axios.post('http://localhost:8000/api/set-user/', data).then(()=>{window.location.reload()});
+    }
 
     return(
         <div className="signup">
@@ -24,9 +45,9 @@ const Profile = ({uname,aname,role,eno,contact,email,pfp})=>{
                             }}/>
                         </div>
                         :
-                        <select className="dropDown">
-                            <option>DESIGNER</option>
-                            <option>DEVELOPER</option>
+                        <select className="dropDown" onChange={(e) => {setField(e.target.value)}}>
+                            <option value="Designer">DESIGNER</option>
+                            <option value="Developer" selected>DEVELOPER</option>
                         </select>
                     }
                 </div>
@@ -54,21 +75,21 @@ const Profile = ({uname,aname,role,eno,contact,email,pfp})=>{
                     <div>
                         <div className="form-floating">
                             <label>ACTUAL NAME</label>
-                            <input type="text" placeholder="ENTER YOUR NAME" className="input"/>
+                            <input type="text" placeholder="ENTER YOUR NAME" className="input" onChange={(e) => setName(e.target.value)} value={formName} />
                         </div>
                         <div className="form-floating">
                             <label>ENROLLMENT NO</label>
-                            <input type="text" placeholder="ENTER ENROLLMENT NO." className="input"/>
+                            <input type="text" placeholder="ENTER ENROLLMENT NO." className="input" onChange={(e) => setEno(e.target.value)} value={formEno} />
                         </div>
                         <div className="form-floating">
                             <label>CONTACT NO</label>
-                            <input type="text" placeholder="ENTER CONTACT NO." pattern="[0-9]{10}" className="input"/>
+                            <input type="text" placeholder="ENTER CONTACT NO." pattern="[0-9]{10}" className="input" onChange={(e) => setContact(e.target.value)} value={formContact} />
                         </div>
                         <div className="form-floating">
                             <label>EMAIL ID</label>
-                            <input type="email" placeholder="ENTER EMAIL ID" className="input"/>
+                            <input type="email" placeholder="ENTER EMAIL ID" className="input" onChange={(e) => setEmail(e.target.value)} value={formEmail} />
                         </div>
-                        <button type="submit" className="logout_button">Sign Up</button>
+                        <button type="button" className="logout_button" onClick={() => setData()} >Sign Up</button>
                     </div>
                 }
             </form>

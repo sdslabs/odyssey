@@ -18,7 +18,10 @@ class GitHubLogin(SocialLoginView):
 def set_custom_user_details(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
-        user = CustomUserModel.objects.get(userId=data['userId'])
+        post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
+        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        content = response.json()
+        user = CustomUserModel.objects.get(username=content['user']['username'])
         user.name = data['name']
         user.email = data['email']
         user.enrollmentNo = data['enrollmentNo']

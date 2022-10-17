@@ -19,12 +19,13 @@ export default function Home() {
       userData.role = response.data.field;
       userData.eno = response.data.enrollmentNo;
       userData.contact = response.data.contactNo; 
-      userData.aname = session.user.name
-      userData.email = session.user.email
+      userData.aname = response.data.name
+      userData.email = response.data.email
       userData.pfp = session.user.image
       setUser(userData)
     });
   }, [session]);
+  
   return (
     <div>
       {user ? <Profile uname={user.uname} aname={user.aname} role={user.role} eno={user.eno} contact={user.contact} email={user.email} pfp={user.pfp}/> : <div>loading</div>}
