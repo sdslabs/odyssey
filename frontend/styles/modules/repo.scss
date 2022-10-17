@@ -6,21 +6,21 @@
   background-image: linear-gradient(to right, #1d0f44, #3d0e3d);
 }
 
-.repodialogue {
-  padding: 1.5rem;
-  margin-left: 10%;
-  background-color: 2px solid #fff;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0.5rem #fff;
-  background-color: #1a1a1a;
-  background-image: url("../../public/download.jpg");
-  height: 50rem;
-  font-size: 1.5rem;
+.repodialogue{
+    padding: 1.5rem;
+    margin-left: 120px;
+    background-color: 2px solid #fff;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0.5rem #fff;;
+    background-color: #1A1A1A;
+    background-image: url('../../public/download.jpg');
+    height: 25rem;
+    font-size: 1.5rem;
 }
 .description {
   color: #fff;

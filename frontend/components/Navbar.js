@@ -9,7 +9,7 @@ const MENU_LIST = [
   { text: "Leaderboard", href: "/leaderboard" },
   { text: "About", href: "/about" },
   { text: "Participation", href: "/participation" },
-  { text: "Profile", href: "/profile" },
+  //{ text: "Profile", href: "/profile" },
 ];
 
 const Navbar = () => {
@@ -49,7 +49,16 @@ const Navbar = () => {
           {!session && (
             <button className="login_signupButton" onClick={() => signIn('github')}>LOGIN / SIGNUP</button>
           )}
-          {session && <button className="signout" onClick={() => signOut()}>USERNAME</button>}
+          {session && 
+          	
+          <div className="dropdownmenu">
+          	<button className="dropdownbutton">username</button>
+          	<div className="dropdown">
+          		<button className="profile_button" href="/profile">PROFILE</button>
+          		<button className="logout_button" onClick={() => signOut()}>LOGOUT</button>
+          	</div>
+          </div>
+          }
         </div>
       </nav>
     </header>

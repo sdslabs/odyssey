@@ -14,10 +14,10 @@ const Resources = ({}) => {
     return (
     <div className="about">
         <p onClick={() => setDivVisible(!listVisible)}>Resources For Beginners</p>
-        <div className={classNameGenerator("list1") + " " + listVisible}>
+        <div className={classNameGenerator("list1") + " " + listVisible + "list"}>
         <div onClick={() => setDiv2VisibleA(!list2VisibleA)}>
         <TextPlus text="helo"/>
-        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleA}>
+        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleA + "list"}>
             <TextCircle text="Lorem ipsum"/>
             <TextCircle text="Lorem ipsum"/>
             <TextCircle text="Lorem ipsum"/>
@@ -25,14 +25,14 @@ const Resources = ({}) => {
         </div>
         <div onClick={() => setDiv2VisibleB(!list2VisibleB)}>
         <TextPlus text="helo"/>
-        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleB}>
+        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleB + "list"}>
             <TextCircle text="Lorem ipsum"/>
             <TextCircle text="Lorem ipsum"/>
         </div>
         </div>
         <div onClick={() => setDiv2VisibleC(!list2VisibleC)}>
         <TextPlus text="helo"/>
-        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleC}>
+        <div className={classNameGenerator("textcirclecont")+" "+ list2VisibleC + "list"}>
             <TextCircle text="Lorem ipsum"/>
             <TextCircle text="Lorem ipsum"/>
         </div>

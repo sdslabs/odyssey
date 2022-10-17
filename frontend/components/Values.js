@@ -10,7 +10,7 @@ const Values = ({}) => {
     return (
     <div className="about">
         <p onClick={() => setDivVisible(!listVisible)}>Values</p>
-        <div className={classNameGenerator("list1") + " " + listVisible}>
+        <div className={classNameGenerator("list1") + " " + listVisible + "list"}>
             <TextSmall text="helo"/>
             <TextSmall text="helo"/>
             <TextSmall text="helo"/>
