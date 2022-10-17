@@ -1,0 +1,42 @@
+const AboutTop = () => {
+  return (
+    <div className="placard">
+      <div className="placard-icons">
+        <img className="placard-icons-instagram" src="/images/instagram2.svg" alt="instagram" />
+        <img className="placard-icons-github" src="/images/github2.svg" alt="github" />	
+      </div>
+      
+      <div className="placard-text">
+        <div>
+          <h1>Hello World!</h1>
+        </div>
+        <div>
+          <p>
+            ODYSSEY IS A CELEBRATION OF CONTRIBUTING TO OPEN SOURCE. THE MAIN AIM OF ORGANISING 
+            THIS EVENT IS TO SPREAD AWARENESS AND TO BUILD A COLLEGE-LEVEL OPEN SOURCE COMMUNITY 
+            KNOW MORE ABOUT THE TEAM BEHIND THIS EVENT.
+          </p>
+        </div>
+        <h4>IN ASSOCIATION WITH</h4>
+        <div className="icons">
+            <div><img src="/images/labs.svg" /></div>
+            <div><img src="/images/mdg.svg" /></div>
+            <div><img src="/images/acm.svg" /></div>
+            <div><img src="/images/dsg.svg" /></div>
+            <div><img src="/images/ds.svg" /></div>
+            <div><img src="/images/infosec.svg" /></div>
+        </div>
+      </div>
+      <div className="rightlane">
+        <div className="rightlogo">
+          <img src="/images/logo.svg" alt="logo" />
+        </div>
+        <div className="odysseyimage">
+          <img src="/images/home-illus.svg" alt="Odyssey" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutTop;

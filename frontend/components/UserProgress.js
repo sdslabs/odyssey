@@ -18,7 +18,7 @@ const UserProgress = ({ progress, rank}) =>{
             })}/>
             </div>
             <div class="rank">
-            {rank} RANK
+            RANK {rank} 
             </div>
     </div>
     )
