@@ -138,7 +138,11 @@
   margin: 0 ;
 }
 
-
+.scroll-announce{
+  overflow-x: scroll;
+  display: flex;
+  flex: row;
+}
 
 .odysseyimage {
   width: fit-content;
