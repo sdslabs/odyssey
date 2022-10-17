@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {useState} from 'react';
 
-const Profile = ({uname,aname,role,eno,contact,email,github})=>{
+const Profile = ({uname,aname,role,eno,contact,email,pfp})=>{
 
     const [editProfile,setEdit] = useState(true);
 
@@ -10,7 +10,7 @@ const Profile = ({uname,aname,role,eno,contact,email,github})=>{
             <form>
                 <div className="avatar">
                     <div className="imageCropper">
-                        <img src="/images/pfp.jpg" alt="Avatar"/>
+                        <img src={pfp} alt="Avatar"/>
                     </div>
                     <div className="labels">
                         <label className="userHandle">{uname}</label>
@@ -34,6 +34,10 @@ const Profile = ({uname,aname,role,eno,contact,email,github})=>{
                 {editProfile === true ? 
                     <div>
                         <div className="form-floating">
+                            <label>ACTUAL NAME</label>
+                            <label className='details'>{aname}</label>
+                        </div>
+                        <div className="form-floating">
                             <label>ENROLLMENT NO</label>
                             <label className='details'>{eno}</label> 
                         </div>
@@ -45,13 +49,13 @@ const Profile = ({uname,aname,role,eno,contact,email,github})=>{
                             <label>EMAIL ID</label>
                             <label className='details'>{email}</label>
                         </div>
-                        <div className="form-floating">
-                            <label>GITHUB HANDLE</label>
-                            <label className='details'>{github}</label>
-                        </div>
                     </div> 
                     :
                     <div>
+                        <div className="form-floating">
+                            <label>ACTUAL NAME</label>
+                            <input type="text" placeholder="ENTER YOUR NAME" className="input"/>
+                        </div>
                         <div className="form-floating">
                             <label>ENROLLMENT NO</label>
                             <input type="text" placeholder="ENTER ENROLLMENT NO." className="input"/>
@@ -63,10 +67,6 @@ const Profile = ({uname,aname,role,eno,contact,email,github})=>{
                         <div className="form-floating">
                             <label>EMAIL ID</label>
                             <input type="email" placeholder="ENTER EMAIL ID" className="input"/>
-                        </div>
-                        <div className="form-floating">
-                            <label>GITHUB HANDLE</label>
-                            <input type="text" placeholder="ENTER GITHUB HANDLE" className="input"/>
                         </div>
                         <button type="submit" className="logout_button">Sign Up</button>
                     </div>
@@ -83,7 +83,6 @@ Profile.defaultProps={
     eno: "Lorem Ipsum",
     contact: "Lorem Ipsum",
     email: "Lorem Ipsum",
-    github: "Lorem Ipsum",
 }
 
 Profile.propTypes={
@@ -92,7 +91,6 @@ Profile.propTypes={
     eno: PropTypes.string,
     contact: PropTypes.string,
     email: PropTypes.string,
-    github: PropTypes.string,
 }
 
 export default Profile;
