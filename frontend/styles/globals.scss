@@ -29,7 +29,7 @@
   background-image: url("/images/background.svg");
   background-repeat: repeat-y;
   background-size: 100%;
-  font-size: 16px;
+  font-size: 1rem;
 }
 body {
   background-color: black;
@@ -50,8 +50,8 @@ header {
 
 nav {
   display: flex;
-  padding: 16px;
-  justify-content: space-between;
+  padding: 1rem;
+  justify-content: space-around;
   align-items: center;
   background-color: transparent;
   font-family: "Work Sans", sans-serif;
@@ -60,26 +60,26 @@ nav {
 .nav__menu-bar {
   display: flex;
   flex-direction: column;
-  row-gap: 6px;
+  row-gap: 0.375;
   cursor: pointer;
 }
 
-.nav__menu-bar div {
-  width: 40px;
-  height: 4px;
+.nav__menu-bar div{
+  width: 2.5rem;
+  height: 0.25rem;
   background-color: black;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .nav__menu-list {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 60px;
-  width: 288px;
-  row-gap: 24px;
-  right: -288px;
-  padding: 24px 16px;
+  top: 3.75rem;
+  width: 18rem;
+  row-gap: 1.5rem;
+  right: -18rem;
+  padding: 1.5rem 1rem;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
   background-color: transparent;
@@ -99,8 +99,8 @@ nav {
   font-weight: bold;
 }
 
-.center {
-  min-height: 600px;
+.center{
+  min-height: 37.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,18 +118,18 @@ nav {
   padding: 0.3rem;
   height: 2rem;
   font-size: 1.2rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .membercard {
   width: 8rem;
   position: relative;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   box-shadow: 0 0 3rem rgb(104, 56, 236);
 }
 
-.memberimage {
-  border-radius: 10px;
+.memberimage{ 
+  border-radius: 0.625rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -141,15 +141,15 @@ nav {
     flex-direction: row;
     min-height: fit-content;
     width: fit-content;
-    column-gap: 24px;
+    column-gap: 1.5rem;
     align-items: center;
   }
   .nav__link::before {
     content: "";
     position: absolute;
     width: 0%;
-    height: 6px;
-    bottom: -16px;
+    height: 0.375rem;
+    bottom: -1rem;
     left: 0;
     background-color: black;
     transition: all 0.2s;

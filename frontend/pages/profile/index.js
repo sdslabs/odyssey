@@ -1,43 +1,55 @@
-import Profile from "../../components/Profile";
+import Profile from "../../components/Profile2";
+import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
 import UserProgress from "../../components/UserProgress";
-import ReposToContribute from '../../components/RepoList';
-import {useState} from 'react';
+
+const axios = require("axios").default;
 
 export default function Home() {
-  const [CardData, setCardData] = useState([
-    {
-      repoName: 'something',
-      tag: 'someTagString',
-      issueTitle: 'IssueTitle',
-      mentor: 'Mentor',
-      claim: false,
-      assignee: 'somedude'
-    },
-    {
-      repoName: 'something',
-      tag: 'someTagString',
-      issueTitle: 'IssueTitle',
-      mentor: 'Mentor',
-      claim: true,
-      assignee: 'somedude'
-    },
-    {
-      repoName: 'something',
-      tag: 'someTagString',
-      issueTitle: 'IssueTitle',
-      mentor: 'Mentor',
-      claim: false,
-      assignee: 'somedude'
-    }
-  ]);
+  const { data: session } = useSession();
+  const [user, setUser] = useState(null);
+
+  const fetchUserData = async () => {
+    const response = await axios.post("http://localhost:8000/api/get-user/", {
+      access_token: session.accessToken,
+      id_token: session.user.id,
+    });
+    return response;
+  };
+
+  useEffect(() => {
+    if (session)
+      fetchUserData().then((response) => {
+        let userData = {};
+        userData.uname = response.data.username;
+        userData.role = response.data.field;
+        userData.eno = response.data.enrollmentNo;
+        userData.contact = response.data.contactNo;
+        userData.aname = response.data.name;
+        userData.email = response.data.email;
+        userData.pfp = session.user.image;
+        setUser(userData);
+      });
+  }, [session]);
+
   return (
-    <div>
-      <Profile />
-      <UserProgress progress={25} rank={3} />
-      <div className="about">
-        <p style={{padding:3+"rem"}}>Your Projects</p>
-      </div>
-      <ReposToContribute list={CardData}/>
-    </div>
+    <>
+      {user ? (
+        <div className="profile-page-content">
+          <Profile
+            uname={user.uname}
+            aname={user.aname}
+            role={user.role}
+            eno={user.eno}
+            contact={user.contact}
+            email={user.email}
+            pfp={user.pfp}
+          />
+          <UserProgress progress={0} rank={"NA"} />
+        </div>
+      ) : (
+        <div>loading</div>
+      )}
+    </>
   );
 }
