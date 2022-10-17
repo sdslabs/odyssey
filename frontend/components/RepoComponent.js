@@ -15,13 +15,4 @@ const Repo=( {Card} )=>{
     )
 }
 
-/* Repo.defaultProp={
-    description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum ",
-    mentor: "VANSH UPPAl"
-}
-
-Repo.defaultProp={
-    description: PropTypes.string,
-    mentor: PropTypes.string
-} */
 export default Repo
