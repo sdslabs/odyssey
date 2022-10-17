@@ -1,5 +1,4 @@
-from dataclasses import field
-from .models import CustomUserModel, IssueModel, AnnoucementModel
+from .models import CustomUserModel, IssueModel, AnnouncementModel
 from rest_framework.serializers import ModelSerializer
 
 class CustomUserModelSerializer(ModelSerializer):
@@ -33,15 +32,16 @@ class IssueModelSerializer(ModelSerializer):
         issue = IssueModel.objects.create(**validated_data)
         return issue
 
-class AnnoucementSerializer(ModelSerializer):
+class AnnouncementModelSerializer(ModelSerializer):
     class Meta:
-        model = AnnoucementModel
+        model = AnnouncementModel
         fields = [
             'title',
-            'content',
+            'description',
             'date',
         ]
 
     def create(self, validated_data):
-        annoucement = AnnoucementModel.objects.create(**validated_data)
-        return annoucement
+        announcement = AnnouncementModel.objects.create(**validated_data)
+        return announcement
+        

@@ -1,9 +1,8 @@
-from msilib.schema import ServiceInstall
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from .serializers import CustomUserModelSerializer, IssueModelSerializer, AnnoucementSerializer
-from .models import CustomUserModel, IssueModel, AnnoucementModel
+from .serializers import CustomUserModelSerializer, IssueModelSerializer, AnnouncementModelSerializer
+from .models import CustomUserModel, IssueModel, AnnouncementModel
 from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from dj_rest_auth.registration.views import SocialLoginView
@@ -45,10 +44,10 @@ def get_all_issues(request):
     return JsonResponse({'message': 'error'}, status=400)
 
 @csrf_exempt
-def get_annoucements(request):
+def get_announcements(request):
     if request.method == 'GET':
-        annoucements = AnnoucementModel.objects.all()
-        serializer = AnnoucementSerializer(annoucements, many=True)
+        announcements = AnnouncementModel.objects.all()
+        serializer = AnnouncementModelSerializer(announcements, many=True)
         return JsonResponse(serializer.data, safe=False, status=200)
     return JsonResponse({'message': 'error'}, status=400)
     
