@@ -49,10 +49,10 @@ const Navbar = () => {
           )}
           {session && 
             <div className="dropdownmenu">
-              <button className="dropdownbutton">username</button>
+              Username
               <div className="dropdown">
-                <a href='/profile'> <button className="profile_button">PROFILE</button> </a>
-                <button className="logout_button" onClick={() => signOut()}>LOGOUT</button>
+                <a href='/profile'> <button className="profile_button">Profile</button> </a>
+                <button className="logout_button" onClick={() => signOut()}>Logout</button>
               </div>
             </div>
           }

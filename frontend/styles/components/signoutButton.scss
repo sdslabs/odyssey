@@ -1,36 +1,38 @@
 .dropdown {
     display: none;
     flex-direction: column;
-    width: 10.75rem;
-    position:absolute ;
+    width: 7rem;
+    position:absolute;
+    margin:0;
 }
 
 .dropdownmenu:hover .dropdown{display:flex ;}
 
 .profile_button {
-    height: 2.875rem;
+    height: 2rem;
     width: 100%;
-    border: 2px solid white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom: 1px solid white;
+    border: 0.2rem solid white;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom: 0rem solid white;
     background: url("../../public/images/background.svg");
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
 .logout_button {
-    height: 2.875rem;
+    height: 2rem;
     width: 100%;
-    border: 2px solid white;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border: 0.2rem solid white;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top:0.2rem solid white;
     background: url("../../public/images/background.svg");
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
 .signout {
-    border: 2px solid rgb(209, 209, 209);
-    border-radius: 8px;
+    border: 0.2rem solid rgb(209, 209, 209);
+    border-radius: 0.5rem;
 }
