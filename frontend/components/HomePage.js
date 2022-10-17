@@ -3,8 +3,8 @@ const HomePage = () => {
   return (
     <div className="placard">
       <div className="placard-icons">
-        <img className="placard-icons-instagram" src="/images/instagram2.svg" alt="instagram" />
-        <img className="placard-icons-github" src="/images/github2.svg" alt="github" />	
+        <a href = "https://instagram.com/" target="_blank"><img className="placard-icons-instagram" src="/images/instagram2.svg" alt="instagram" /></a>
+        <a href = "https://github.com/" target="_blank"><img className="placard-icons-github" src="/images/github2.svg" alt="github" /></a>
       </div>
       
       <div className="placard-text">
