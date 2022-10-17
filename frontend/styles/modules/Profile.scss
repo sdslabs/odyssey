@@ -1,111 +1,111 @@
 .profile-card {
-    box-sizing: border-box;
-    position: absolute;
-    width: 52rem;
-    height: 35.25rem;
-    left: 14.75rem;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0rem 0.305rem 1rem 0.152rem rgba(221, 230, 243, 0.25);
-    border: 3px solid #FFFFFF;
-    backdrop-filter: blur(0.281rem);
-    border-radius: 1.086rem;
+  box-sizing: border-box;
+  position: absolute;
+  width: 52rem;
+  height: 35.25rem;
+  left: 9.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0rem 0.305rem 1rem 0.152rem rgba(221, 230, 243, 0.25);
+  border: 0.188rem solid #ffffff;
+  backdrop-filter: blur(0.281rem);
+  border-radius: 1.086rem;
+}
+.image {
+  position: relative;
+  left: 5%;
+  top: 10%;
+  margin-left: 5%;
+  background-color: rgba(0, 0, 0, 0);
+}
+.userimage {
+  height: 10.438rem;
+  width: 10.438rem;
+  border-radius: 50%;
+}
 
-
-}
-.image{
-    position: absolute;
-    left: 3.438rem;
-    top: 3.125rem;
-    background-color: rgba(0, 0, 0, 0);
-}
-.userimage{
-    height: 10.438rem;
-    width: 10.438rem;
-    border-radius: 50%;
-}
 hr {
-    position: absolute;
-    width: 45.125rem;
-    height: 0rem;
-    left: 3.428rem;
-    top: 15rem;
-    border: 0.125rem solid rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 35.125rem;
+  left: 10.18rem;
+  top: 17rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.4);
 }
 
-.username{
-    position: absolute;
-    top: 5.563rem;
-    left: 15.813rem;
-    font-family: 'BankGothic Md BT';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5rem;
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0);
-    color: #FFFFFF;
+.username {
+  position: absolute;
+  top: 5.563rem;
+  left: 15.813rem;
+  font-family: "BankGothic Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
 }
 
-.actualname{
-    position: absolute;
-    left: 15.813rem;
-    top: 8.625rem;
-    font-family: 'BankGothic Lt BT';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.75rem;
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0);
-    color: #cfcdcd;
+.actualname {
+  position: absolute;
+  left: 15.813rem;
+  top: 8.625rem;
+  font-family: "BankGothic Lt BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0);
+  color: #cfcdcd;
 }
 
-.role{
-    position: absolute;
-    left: 15.813rem;
-    top: 10.69rem;
-    font-family: 'BankGothic Lt BT';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0);
-    color: #cfcdcd;
+.role {
+  font-family: "BankGothic Lt BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0);
+  color: #cfcdcd;
+  text-align: left;
 }
 
-.field{
-    position: absolute;
-    font-family: 'BankGothic Md BT';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0);
+.field {
+  position: absolute;
+  font-family: "BankGothic Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.value{
-    position: absolute;
-    font-family: 'BankGothic Lt BT';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    color: #cfcdcd;
-    background-color: rgba(0, 0, 0, 0);
+.value {
+  position: absolute;
+  font-family: "BankGothic Lt BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #cfcdcd;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.edit{
-    position: absolute;
-    left: 45.67rem;
-    top: 3.3rem;
-    background: rgba(0, 0, 0, 0);
+.edit {
+  background: rgba(0, 0, 0, 0);
+}
+
+.profile-page-content {
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
 }

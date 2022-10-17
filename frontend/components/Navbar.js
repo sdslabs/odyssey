@@ -1,22 +1,34 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavItem from "./NavItem";
-import { signIn, signOut, useSession, SessionProvider } from "next-auth/react";
-import DropDown from "./Navbar/UsernameDropdown";
+import { signIn, signOut, useSession } from "next-auth/react";
+import axios from "axios";
 
 const MENU_LIST = [
   { text: "Events", href: "/events" },
   { text: "Leaderboard", href: "/leaderboard" },
   { text: "About", href: "/about" },
   { text: "Participation", href: "/participation" },
-  //{ text: "Profile", href: "/profile" },
 ];
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
+  const [userId, setUserId] = useState("");
 
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
+
+  const fetchUserData = async () => {
+    const response = await axios.post('http://localhost:8000/api/get-user/', { access_token: session.accessToken, id_token: session.user.id });
+    return response
+  }
+
+
+  useEffect(() => {
+    if (session) fetchUserData().then((response)=>{
+      setUserId(response.data.username)
+    });
+  }, [session]);
 
   return (
     <header>
@@ -50,14 +62,13 @@ const Navbar = () => {
             <button className="login_signupButton" onClick={() => signIn('github')}>LOGIN / SIGNUP</button>
           )}
           {session && 
-          	
-          <div className="dropdownmenu">
-          	<button className="dropdownbutton">username</button>
-          	<div className="dropdown">
-          		<button className="profile_button" href="/profile">PROFILE</button>
-          		<button className="logout_button" onClick={() => signOut()}>LOGOUT</button>
-          	</div>
-          </div>
+            <div className="dropdownmenu">
+              {userId}
+              <div className="dropdown">
+              	<button className="profile_button"><NavItem { ...{ text: "Profile", href: "/profile" } } /></button>
+                <button className="logout_button" onClick={() => signOut()}>Logout</button>
+              </div>
+            </div>
           }
         </div>
       </nav>

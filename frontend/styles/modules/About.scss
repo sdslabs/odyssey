@@ -1,11 +1,11 @@
 .about{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 0.625rem;
     margin-left: 6.375rem;
     margin-right: 4.5rem;
     background-color: rgba(0, 0, 0, 0);
-    
+    margin-bottom: 2rem;
     .searchandissues{
         display: flex;
         flex-direction: row;
@@ -79,14 +79,8 @@
 }
 
 .members{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 50px;
 }
 
-.member{
-    display: flex;
-    justify-content: center;
-    width: 33%;
-}
