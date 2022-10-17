@@ -4,6 +4,9 @@
     color:white;
     display: flex;
     padding: 2rem;
+    width: 350px;
+    height: 564px;
+    margin-left: 1200.5px;
     flex-direction: column;
     align-items: center;
     border: 2px solid #fff;
@@ -11,6 +14,7 @@
     text-shadow: 0 0 0.5rem #fff;
     background-color: #1A1A1A;
     background-image: url('../../public/download.jpg');
+    border-radius: 1.086rem;
 }
 
 .progress{

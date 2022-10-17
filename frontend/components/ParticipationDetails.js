@@ -9,7 +9,7 @@ const ParticipationDetails = ({}) => {
     return (
     <div className="about">
         <p onClick={() => setDivVisible(!listVisible)}>Participation Details</p>
-        <div className={classNameGenerator("list1") + " " + listVisible}>
+        <div className={classNameGenerator("list1") + " " + listVisible + "list"}>
         <TextDash text="helo"/>
         <TextDash text="helo"/>
         <TextDash text="helo"/>
