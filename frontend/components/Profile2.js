@@ -1,17 +1,37 @@
+import axios from 'axios';
+import { useSession } from 'next-auth/react';
 import PropTypes from 'prop-types';
 import {useState} from 'react';
 
-<<<<<<< HEAD
-const Profile = ({uname,aname,role,eno,contact,email,github})=>{
-
+const Profile = ({uname,aname,role,eno,contact,email,pfp})=>{
+    const {data:session} =useSession()
     const [editProfile,setEdit] = useState(true);
+    const [formName,setName] = useState("");
+    const [formEmail,setEmail] = useState("");
+    const [formEno,setEno] = useState("");
+    const [formContact,setContact] = useState("");
+    const [formField,setField] = useState("Developer");
+
+    async function setData() {
+        let data = {
+            access_token: session.accessToken,
+            id_token: session.user.id,
+            name: formName ? formName : aname,
+            email: formEmail ? formEmail : email,
+            enrollmentNo: formEno ? formEno : eno,
+            contactNo: formContact ? formContact : contact,
+            field: formField ? formField : field,
+        }
+        
+        axios.post('http://localhost:8000/api/set-user/', data).then(()=>{window.location.reload()});
+    }
 
     return(
         <div className="signup">
             <form>
                 <div className="avatar">
                     <div className="imageCropper">
-                        <img src="/images/pfp.jpg" alt="Avatar"/>
+                        <img src={pfp} alt="Avatar"/>
                     </div>
                     <div className="labels">
                         <label className="userHandle">{uname}</label>
@@ -25,15 +45,19 @@ const Profile = ({uname,aname,role,eno,contact,email,github})=>{
                             }}/>
                         </div>
                         :
-                        <select className="dropDown">
-                            <option>DESIGNER</option>
-                            <option>DEVELOPER</option>
+                        <select className="dropDown" onChange={(e) => {setField(e.target.value)}}>
+                            <option value="Designer">DESIGNER</option>
+                            <option value="Developer" selected>DEVELOPER</option>
                         </select>
                     }
                 </div>
                 {editProfile === true ? <hr />:true}
                 {editProfile === true ? 
                     <div>
+                        <div className="form-floating">
+                            <label>ACTUAL NAME</label>
+                            <label className='details'>{aname}</label>
+                        </div>
                         <div className="form-floating">
                             <label>ENROLLMENT NO</label>
                             <label className='details'>{eno}</label> 
@@ -46,54 +70,29 @@ const Profile = ({uname,aname,role,eno,contact,email,github})=>{
                             <label>EMAIL ID</label>
                             <label className='details'>{email}</label>
                         </div>
-                        <div className="form-floating">
-                            <label>GITHUB HANDLE</label>
-                            <label className='details'>{github}</label>
-                        </div>
                     </div> 
                     :
                     <div>
                         <div className="form-floating">
+                            <label>ACTUAL NAME</label>
+                            <input type="text" placeholder="ENTER YOUR NAME" className="input" onChange={(e) => setName(e.target.value)} value={formName} />
+                        </div>
+                        <div className="form-floating">
                             <label>ENROLLMENT NO</label>
-                            <input type="text" placeholder="ENTER ENROLLMENT NO." className="input"/>
+                            <input type="text" placeholder="ENTER ENROLLMENT NO." className="input" onChange={(e) => setEno(e.target.value)} value={formEno} />
                         </div>
                         <div className="form-floating">
                             <label>CONTACT NO</label>
-                            <input type="text" placeholder="ENTER CONTACT NO." pattern="[0-9]{10}" className="input"/>
+                            <input type="text" placeholder="ENTER CONTACT NO." pattern="[0-9]{10}" className="input" onChange={(e) => setContact(e.target.value)} value={formContact} />
                         </div>
                         <div className="form-floating">
                             <label>EMAIL ID</label>
-                            <input type="email" placeholder="ENTER EMAIL ID" className="input"/>
+                            <input type="email" placeholder="ENTER EMAIL ID" className="input" onChange={(e) => setEmail(e.target.value)} value={formEmail} />
                         </div>
-                        <div className="form-floating">
-                            <label>GITHUB HANDLE</label>
-                            <input type="text" placeholder="ENTER GITHUB HANDLE" className="input"/>
-                        </div>
-                        <button type="submit" className="logout_button">Sign Up</button>
+                        <button type="button" className="logout_button" onClick={() => setData()} >Sign Up</button>
                     </div>
                 }
             </form>
-=======
-const Profile = ({uname,aname,role,eno,contact,email,github}) => {
-    return (
-        <div className="profile-card">
-            <div className='profile-container'>
-                <p className='username'>{uname}</p>
-                <p className='actualname'>{aname}</p>
-                <p className='role'>{role}</p>
-            <div className='image'><img className="userimage" src='/images/test_user.png' /></div>
-            <hr className="line" />
-            <img className="edit" src="images/edit.svg" />
-            <p className='field' style={{top: 16.69+"rem", left: 3.438+"rem"}}>ENROLLMENT NO</p>
-            <p className='field' style={{top: 20.5+"rem", left: 3.438+"rem"}}>CONTACT NO</p>
-            <p className='field' style={{top: 24.31+"rem", left: 3.438+"rem"}}>EMAIL ID</p>
-            <p className='field' style={{top: 28.125+"rem", left: 3.438+"rem"}}>GITHUB HANDLE</p>
-            <p className='value' style={{top: 16.69+"rem", left: 26.5+"rem"}}>{eno}</p>
-            <p className='value' style={{top: 20.5+"rem", left: 26.5+"rem"}}>{contact}</p>
-            <p className='value' style={{top: 24.31+"rem", left: 26.5+"rem"}}>{email}</p>
-            <p className='value' style={{top: 28.125+"rem", left: 26.5+"rem"}}>{github}</p>
-            </div>
->>>>>>> 9b03e703dfdc8a299088770f23d7bde6abc2e4f7
         </div>
     )
 }
@@ -105,7 +104,6 @@ Profile.defaultProps={
     eno: "Lorem Ipsum",
     contact: "Lorem Ipsum",
     email: "Lorem Ipsum",
-    github: "Lorem Ipsum",
 }
 
 Profile.propTypes={
@@ -114,7 +112,6 @@ Profile.propTypes={
     eno: PropTypes.string,
     contact: PropTypes.string,
     email: PropTypes.string,
-    github: PropTypes.string,
 }
 
 export default Profile;

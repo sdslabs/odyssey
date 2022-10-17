@@ -117,10 +117,47 @@
   align-content: space-between;
 }
 
-.odysseyimage {
-  width: 19rem;
-  height: 19rem;
+.placard-icons {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
+}
+.placard-icons-instagram {
+  
+  width: 2rem;
+  padding-bottom: 1rem;
+  margin: 0 ;
+}
+.placard-icons-github {
+  
+  width: 2rem;
+  padding-top: 1rem;
+  margin: 0 ;
+}
+
+
+
+.odysseyimage {
+  width: fit-content;
+  margin-right:20%;
+}
+.placard-icons-instagram {
+  width: 2rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+.placard-icons-github {
+  width: 2rem;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+.odysseyimage {
+  width: fit-content;
+  margin-right:20%;
 }
 .odysseyimage > img {
   max-width: 100%;
@@ -129,15 +166,17 @@
 .rightlane {
   width: 100%;
   height: 100%;
-  display: column;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
 }
 .rightlogo {
-  display: flex;
-  justify-content: center;
+  width:  15%;
+  margin-right:20%;
+}
+.rightlogo > img {
+  width: 100%;
 }
 
 h1 {
@@ -152,11 +191,12 @@ header {
   justify-content: center;
 }
 header > nav {
-  width: 75%;
+  width: 90%;
 }
 #navbar-logo {
   width: 3rem;
 }
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

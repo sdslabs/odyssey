@@ -1,9 +1,10 @@
 from django.urls import path
 from odyssey import views
 
-
 urlpatterns = [
-    path('tasks/', views.tasks),
-    path('tasks/<int:pk>/', views.task_detail),
-    path('github/', views.GitHubLogin.as_view(), name='github')
+    path('github/', views.GitHubLogin.as_view(), name='github'),
+    path('update-user/', views.set_custom_user_details, name='update-user'),
+    path('get-user/', views.get_custom_user_details, name='get-user'),
+    path('set-user/', views.set_custom_user_details, name='set-issue'),
+    path('get-all-issues/', views.get_all_issues, name='get-all-issues'),
 ]
