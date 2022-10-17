@@ -3,7 +3,6 @@ import ParticipationDetails from '../../components/ParticipationDetails';
 import PullMerge from '../../components/PullMerge';
 import CodeOfConduct from '../../components/CodeOfConduct';
 import Resources from '../../components/Resources';
-import Values from '../../components/Values';
 import Searchbar from '../../components/Searchbar';
 import {useState} from 'react';
 
@@ -48,7 +47,6 @@ export default function Home() {
           <PullMerge />
           <CodeOfConduct />
           <Resources />
-          <Values />
         </div>
     </div>
   );

@@ -9,7 +9,7 @@ const MENU_LIST = [
   { text: "Leaderboard", href: "/leaderboard" },
   { text: "About", href: "/about" },
   { text: "Participation", href: "/participation" },
-  //{ text: "Profile", href: "/profile" },
+  { text: "Profile", href: "/profile" },
 ];
 
 const Navbar = () => {
