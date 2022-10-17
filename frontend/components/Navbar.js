@@ -2,14 +2,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
 import { signIn, signOut, useSession, SessionProvider } from "next-auth/react";
-import DropDown from "./Navbar/UsernameDropdown";
 
 const MENU_LIST = [
   { text: "Events", href: "/events" },
   { text: "Leaderboard", href: "/leaderboard" },
   { text: "About", href: "/about" },
   { text: "Participation", href: "/participation" },
-  //{ text: "Profile", href: "/profile" },
 ];
 
 const Navbar = () => {
@@ -50,14 +48,13 @@ const Navbar = () => {
             <button className="login_signupButton" onClick={() => signIn('github')}>LOGIN / SIGNUP</button>
           )}
           {session && 
-          	
-          <div className="dropdownmenu">
-          	<button className="dropdownbutton">username</button>
-          	<div className="dropdown">
-          		<a href='/profile'> <button className="profile_button">PROFILE</button> </a>
-          		<button className="logout_button" onClick={() => signOut()}>LOGOUT</button>
-          	</div>
-          </div>
+            <div className="dropdownmenu">
+              <button className="dropdownbutton">username</button>
+              <div className="dropdown">
+                <a href='/profile'> <button className="profile_button">PROFILE</button> </a>
+                <button className="logout_button" onClick={() => signOut()}>LOGOUT</button>
+              </div>
+            </div>
           }
         </div>
       </nav>
