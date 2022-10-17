@@ -50,4 +50,18 @@ def get_all_issues(request):
         serializer = IssueModelSerializer(issues, many=True)
         return JsonResponse(serializer.data, safe=False, status=200)
     return JsonResponse({'message': 'error'}, status=400)
+
+@csrf_exempt
+def claim_issue(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        issue = IssueModel.objects.get(issue=data['issue'])
+        post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
+        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        content = response.json()
+        issue.assigneeName = content['user']['name']
+        issue.assigneeId = content['user']['username']
+        issue.save()
+        return JsonResponse({'message': 'success'}, status=200)
+    return JsonResponse({'message': 'error'}, status=400)
     

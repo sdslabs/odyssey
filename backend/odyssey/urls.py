@@ -7,4 +7,5 @@ urlpatterns = [
     path('get-user/', views.get_custom_user_details, name='get-user'),
     path('set-user/', views.set_custom_user_details, name='set-issue'),
     path('get-all-issues/', views.get_all_issues, name='get-all-issues'),
+    path('claim-issue/', views.claim_issue, name='claim_issue'),
 ]
