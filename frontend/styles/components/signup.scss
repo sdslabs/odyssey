@@ -1,130 +1,140 @@
-.signup{
-    box-sizing: border-box;
-    width: 50%;
-    height: 15%;
-    margin-left: 10%;
-    margin-bottom: 5%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 0.24rem solid #FFFFFF;
-    //backdrop-filter: blur(4.82599px);
+.signup {
+  box-sizing: border-box;
+  width: 50%;
+  height: 564px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.24rem solid #ffffff;
+  //backdrop-filter: blur(4.82599px);
 
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 1rem;
-    //filter: blur(15.9258px);
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 1rem;
+  //filter: blur(15.9258px);
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.input{
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
-    border: none;
-    font-size: 1.75rem;
-    line-height: 1.7rem;
-    font-family: "BankGothic Md BT";
-    height: 2.81rem;
-    width: 33.4rem;
-    padding-left: 1.56rem;
-    margin-left: 1.56rem; 
+.input {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1.7rem;
+  font-family: "BankGothic Md BT";
+  height: 2.81rem;
+  width: 60%;
+  padding-left: 1.56rem;
+  margin-left: 1.56rem;
 }
 
-.dropDown{
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
-    border: none;
-    padding-left: 1rem;
-    font-size: 1.75rem;
-    line-height: 1.7rem;
-    font-family: "BankGothic Md BT";
-    height: 2.81rem;
+.dropDown {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  border: none;
+  padding-left: 1rem;
+  font-size: 1.75rem;
+  line-height: 1.7rem;
+  font-family: "BankGothic Md BT";
+  height: 2.81rem;
 }
 
-.avatar{
-    display: flex;
-    flex-direction: row;
-    margin-left: 1%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    justify-content: space-evenly;
-    align-items: center;
-    
+.avatar {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8%;
 }
 
-.avatar img{
-    display: inline;
-    width: auto;
-    size: 5%;
+.avatar img {
+  display: inline;
+  width: auto;
+  size: 5%;
 }
 
-.imageCropper{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    background-size: cover;
-    object-fit: cover;
+.imageCropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-size: cover;
+  object-fit: cover;
 }
 
-.labels{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 10px;
+.labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
 }
 
-.mainForm{
-    display: flex;
-    flex-direction: row;
+.mainForm {
+  display: flex;
+  flex-direction: row;
 }
 
-.form-floating{
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-    line-height: 20px;
-    font-family: "BankGothic Md BT";
-    justify-content: space-between;
-    margin: 1.625rem;
+.form-floating {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "BankGothic Md BT";
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.userHandle{
-    font-size: 2.5rem;
+.user-form {
+  height: 100%;
+  width: 100%;
+}
+.user-details {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.625rem;
 }
 
-.actualName{
-    font-size: 2rem;
+.userHandle {
+  font-size: 2.5rem;
 }
 
-.field{
-    font-family: 'BankGothic Md BT';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0);
+.actualName {
+  font-size: 2rem;
 }
 
-.details{
-    font-family: 'BankGothic Lt BT';
-    font-style: normal;
-    font-weight: 400;
+.field {
+  font-family: "BankGothic Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+}
 
-    font-size: 2rem;
+.details {
+  font-family: "BankGothic Lt BT";
+  font-style: normal;
+  font-weight: 400;
 
-    line-height: 97.69%;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
-    color: #cfcdcd;
-    background-color: rgba(0, 0, 0, 0);
-    padding-left: 1.56rem;
-    margin-left: 1.56rem; 
-    width: 33.4rem;
-    text-align: center;
+  font-size: 2rem;
+
+  line-height: 97.69%;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #cfcdcd;
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 1.56rem;
+  margin-left: 1.56rem;
+  width: 33.4rem;
+  text-align: center;
 }
