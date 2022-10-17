@@ -77,8 +77,8 @@ const TimelineItem = ({ data }) => (
 
 const Timeline = () => 
     timelineData.length > 0 && (
-        <div>
-            <h1 className="timeline-heading">Timeline</h1>
+        <div className="timeline">
+            <h1>Timeline</h1>
             <div className="timeline-container">
                 {timelineData.map((data, idx) => (
                     <TimelineItem data={data} key={idx} />
