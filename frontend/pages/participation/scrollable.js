@@ -1,23 +1,36 @@
 import ReposToContribute from '../../components/RepoList';
-
-const Repos=[
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum  "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "},
-  {mentor:"VANSH UPPAL", description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum "}
-]
+import {useState} from 'react';
 
 export default function Home() {
-
+  const [CardData, setCardData] = useState([
+    {
+      repoName: 'something',
+      tag: 'someTagString',
+      issueTitle: 'IssueTitle',
+      mentor: 'Mentor',
+      claim: false,
+      assignee: 'somedude'
+    },
+    {
+      repoName: 'something',
+      tag: 'someTagString',
+      issueTitle: 'IssueTitle',
+      mentor: 'Mentor',
+      claim: true,
+      assignee: 'somedude'
+    },
+    {
+      repoName: 'something',
+      tag: 'someTagString',
+      issueTitle: 'IssueTitle',
+      mentor: 'Mentor',
+      claim: false,
+      assignee: 'somedude'
+    }
+  ]);
   return (
     <div>
-        <ReposToContribute list={Repos}/>
+        <ReposToContribute list={CardData}/>
     </div>
   );
 }
