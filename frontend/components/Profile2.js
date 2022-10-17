@@ -32,9 +32,12 @@ const Profile = ({ uname, aname, role, eno, contact, email, pfp }) => {
     <div className="signup">
       <form className="user-form">
         <div className="avatar">
-          <div className="imageCropper">
-            <img src={pfp} alt="Avatar" />
-          </div>
+          <div
+            className="imageCropper"
+            style={{
+              backgroundImage: `url(${pfp})`,
+            }}
+          ></div>
           <div className="labels">
             <label className="userHandle">{uname}</label>
             <label className="actualName">{aname}</label>

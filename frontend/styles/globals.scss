@@ -64,7 +64,7 @@ nav {
   cursor: pointer;
 }
 
-.nav__menu-bar div{
+.nav__menu-bar div {
   width: 2.5rem;
   height: 0.25rem;
   background-color: black;
@@ -99,7 +99,7 @@ nav {
   font-weight: bold;
 }
 
-.center{
+.center {
   min-height: 37.5rem;
   display: flex;
   justify-content: center;
@@ -107,28 +107,38 @@ nav {
 }
 
 .membername {
-  background-color: rgb(104, 56, 236, 0.72);
-  float: none;
-  color: #ffffff;
+  width: 200px;
+  height: 62.53px;
   position: absolute;
-  top: 74%;
+  bottom: 0;
+  background: rgba(104, 56, 236, 0.2);
+  backdrop-filter: blur(4.575px);
+  font-family: "BankGothic Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 97.69%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
   text-align: center;
-  z-index: 1000;
-  width: 100%;
-  padding: 0.3rem;
-  height: 2rem;
-  font-size: 1.2rem;
-  border-radius: 0.625rem;
+  color: #ffffff;
 }
 
 .membercard {
-  width: 8rem;
+  width: 200px;
+  height: 230.5px;
   position: relative;
   border-radius: 0.625rem;
   box-shadow: 0 0 3rem rgb(104, 56, 236);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
-.memberimage{ 
+.memberimage {
   border-radius: 0.625rem;
 }
 
