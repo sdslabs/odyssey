@@ -6,6 +6,7 @@ from .models import CustomUserModel, IssueModel
 from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from dj_rest_auth.registration.views import SocialLoginView
+import requests
 
 class GitHubLogin(SocialLoginView):
     authentication_classes = []
@@ -17,7 +18,10 @@ class GitHubLogin(SocialLoginView):
 def set_custom_user_details(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
-        user = CustomUserModel.objects.get(userId=data['userId'])
+        post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
+        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        content = response.json()
+        user = CustomUserModel.objects.get(username=content['user']['username'])
         user.name = data['name']
         user.email = data['email']
         user.enrollmentNo = data['enrollmentNo']
@@ -28,9 +32,13 @@ def set_custom_user_details(request):
     return JsonResponse({'message': 'error'}, status=400)
 
 @csrf_exempt
-def get_custom_user_details(request, userId):
-    if request.method == 'GET':
-        user = CustomUserModel.objects.get(userId=userId)
+def get_custom_user_details(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
+        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        content = response.json()
+        user = CustomUserModel.objects.get(username=content['user']['username'])
         serializer = CustomUserModelSerializer(user)
         return JsonResponse(serializer.data, status=200)
     return JsonResponse({'message': 'error'}, status=400)

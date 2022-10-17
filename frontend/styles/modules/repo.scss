@@ -1,21 +1,21 @@
 .repobox{
-    border: 2px solid #fff;
+    border: 0.125rem solid #fff;
     margin: 0.8rem;
-    padding:10px;
-    border-radius: 10px;
+    padding: 0.625;
+    border-radius: 0.625rem;
     background-image: linear-gradient(to right, #1D0F44 , #3D0E3D);
 }
 
 .repodialogue{
     padding: 1.5rem;
-    margin-left: 120px;
-    background-color: 2px solid #fff;
+    margin-left: 0.625rem;
+    background-color: 0.125rem solid #fff;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    border: 0.125rem solid #fff;
     box-shadow: 0 0 0.5rem #fff;;
     background-color: #1A1A1A;
     background-image: url('../../public/download.jpg');
@@ -37,20 +37,20 @@
 }
 
 .scroll::-webkit-scrollbar {
-    width: 7px;
-    inset: 0 3px 0;
+    width: 0.438rem;
+    inset: 0 0.188rem 0;
 }
 
 .scroll::-webkit-scrollbar-track {
-    -webkit-box-shadow:inset 0 3px 0 rgba(0,0,0,0.3); 
-    box-shadow:inset 0 3px 0 rgba(0,0,0,0.3); 
+    -webkit-box-shadow:inset 0 0.188rem 0 rgba(0,0,0,0.3); 
+    box-shadow:inset 0 0.188rem 0 rgba(0,0,0,0.3); 
 }
 
 .scroll::-webkit-scrollbar-thumb {
-    border-radius: 10px; 
+    border-radius: 0.625rem; 
     background: white;
-    -webkit-box-shadow: inset 2px 2px 2px rgba(255,255,255,.25), 
-        inset -2px -2px 2px rgba(0,0,0,.25);
-    box-shadow: inset 2px 2px 2px rgba(255,255,255,.25), 
-    inset -2px -2px 2px rgba(0,0,0,.25);
+    -webkit-box-shadow: inset 0.125rem 0.125rem 0.125rem rgba(255,255,255,.25), 
+        inset -0.125rem -0.125rem 0.125rem rgba(0,0,0,.25);
+    box-shadow: inset 0.125rem 0.125rem 0.125rem rgba(255,255,255,.25), 
+    inset -0.125rem -0.125rem 0.125rem rgba(0,0,0,.25);
 }
