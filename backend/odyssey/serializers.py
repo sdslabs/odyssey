@@ -1,6 +1,6 @@
-from .models import CustomUserModel, IssueModel
+from dataclasses import field
+from .models import CustomUserModel, IssueModel, AnnoucementModel
 from rest_framework.serializers import ModelSerializer
-from django.conf import settings
 
 class CustomUserModelSerializer(ModelSerializer):
     class Meta:
@@ -32,3 +32,16 @@ class IssueModelSerializer(ModelSerializer):
     def create(self, validated_data):
         issue = IssueModel.objects.create(**validated_data)
         return issue
+
+class AnnoucementSerializer(ModelSerializer):
+    class Meta:
+        model = AnnoucementModel
+        fields = [
+            'title',
+            'content',
+            'date',
+        ]
+
+    def create(self, validated_data):
+        annoucement = AnnoucementModel.objects.create(**validated_data)
+        return annoucement
