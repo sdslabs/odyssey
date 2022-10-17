@@ -1,17 +1,21 @@
 @import url('http://fonts.cdnfonts.com/css/bankgothic-md-bt');
 
-.timeline-heading {
-  padding-left: 8.8rem;
+.timeline{
+  display: flex;
+  flex-direction: column;
+  padding-left:8%;
+  width: 100%;
+  height: 100%;
 }
-
 .timeline-container {
   display: flex;
   flex-direction: row;
   position: relative;
-  margin: 40px 0;
-  //padding-left: 4rem;
 }
 
+.timeline > h1{
+  padding-left: 3%;
+}
 .timeline-container::after {
   background-color: #E9456088;
   content: '';
