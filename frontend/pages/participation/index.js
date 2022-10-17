@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { Octokit, App } from "octokit";
 import Info from "../../components/Info";
+import SocialIcons from "../../components/SocialIcons";
 const axios = require("axios").default;
 
 export default function Home() {
@@ -57,15 +58,18 @@ export default function Home() {
           <Searchbar />
         </div>
       </div>
-      <ReposToContribute list={CardData} />
+      <div className="content">
+        <SocialIcons />
+        <ReposToContribute list={CardData} />
+      </div>
       <div className="participationB">
         <Info
           heading={"Participation Details"}
           text={ParticipationDetailsData}
         />
-        <Info heading={"Pull Merge Request Details"} text={[]} />
+        {/* <Info heading={"Pull Merge Request Details"} text={[]} />
         <Info heading={"Code of Conduct"} text={[]} />
-        <Resources />
+        <Resources /> */}
       </div>
     </>
   );

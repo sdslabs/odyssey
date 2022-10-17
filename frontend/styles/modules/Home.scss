@@ -114,11 +114,15 @@
   width: 100%;
   height: 100%;
   justify-content: center;
-  align-content: space-between;
+  align-content: space-around;
+}
+
+.placard-text {
+  width: 60%;
 }
 
 .placard-icons {
-  width: 20%;
+  width: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,23 +130,19 @@
   margin: 0 auto;
 }
 .placard-icons-instagram {
-  
   width: 2rem;
   padding-bottom: 1rem;
-  margin: 0 ;
+  margin: 0;
 }
 .placard-icons-github {
-  
   width: 2rem;
   padding-top: 1rem;
-  margin: 0 ;
+  margin: 0;
 }
-
-
 
 .odysseyimage {
   width: fit-content;
-  margin-right:20%;
+  margin-right: 20%;
 }
 .placard-icons-instagram {
   width: 2rem;
@@ -157,14 +157,14 @@
 
 .odysseyimage {
   width: fit-content;
-  margin-right:20%;
+  margin-right: 20%;
 }
 .odysseyimage > img {
   max-width: 100%;
   max-height: 100%;
 }
 .rightlane {
-  width: 100%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -172,8 +172,8 @@
   align-items: center;
 }
 .rightlogo {
-  width:  15%;
-  margin-right:20%;
+  width: 15%;
+  margin-right: 20%;
 }
 .rightlogo > img {
   width: 100%;
