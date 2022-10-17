@@ -51,7 +51,8 @@ const Navbar = () => {
             <div className="dropdownmenu">
               Username
               <div className="dropdown">
-                <a href='/profile'> <button className="profile_button">Profile</button> </a>
+              	
+              	<button className="profile_button"><NavItem { ...{ text: "Profile", href: "/profile" } } /></button>
                 <button className="logout_button" onClick={() => signOut()}>Logout</button>
               </div>
             </div>
