@@ -13,9 +13,10 @@
 
 }
 .image{
-    position: absolute;
-    left: 3.438rem;
-    top: 3.125rem;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    margin-left: 5%;
     background-color: rgba(0, 0, 0, 0);
 }
 .userimage{
@@ -24,6 +25,10 @@
     border-radius: 50%;
 }
 hr {
+    position: absolute;
+    width: 35.125rem;
+    left: 10.18rem;
+    top: 17rem;
     border: 0.125rem solid rgba(255, 255, 255, 0.4);
 }
 
@@ -97,5 +102,7 @@ hr {
 }
 
 .edit{
+    
     background: rgba(0, 0, 0, 0);
+
 }
