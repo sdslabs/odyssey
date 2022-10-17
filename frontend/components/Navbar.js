@@ -65,7 +65,6 @@ const Navbar = () => {
             <div className="dropdownmenu">
               {userId}
               <div className="dropdown">
-              	
               	<button className="profile_button"><NavItem { ...{ text: "Profile", href: "/profile" } } /></button>
                 <button className="logout_button" onClick={() => signOut()}>Logout</button>
               </div>
