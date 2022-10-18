@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react';
 
-
 const EventCard = ({date, heading, description}) => {
-    
     return (
     <div className="card">
         <div className="card__container">

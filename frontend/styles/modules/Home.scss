@@ -138,8 +138,14 @@
   margin: 0 ;
 }
 
-.scroll-announce{
-  overflow-x: scroll;
+.anouncebox{
+  display: flex;
+  flex: row;
+
+}
+
+.events{
+  overflow-x: hidden;
   display: flex;
   flex: row;
 }
