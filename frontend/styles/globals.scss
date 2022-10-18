@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
-@import url("https://db.onlinewebfonts.com/c/adfd298e421945768d7bf13da3ee8a45?family=BankGothic+Md+BT");
-@import url("https://db.onlinewebfonts.com/c/8058c5fac0f4c6d0d692921f5637319a?family=BankGothic+Lt+BT");
+@import url("https://db.onlinewebfonts.com/c/aa28c4a888c2892a838deba6df557423?family=BankGothicCLtBT");
+@import url("https://db.onlinewebfonts.com/c/702bb7295ee36b0f15acddf12f131188?family=BankGothicCMdBT");
 @import "./modules/button";
 @import "./modules/Home.scss";
 @import "./modules/timeline";
@@ -22,7 +22,7 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  font-family: "BankGothic Md BT";
+  font-family: "BankGothicCMdBT";
   color: azure;
 }
 
@@ -114,7 +114,6 @@ nav {
   bottom: 0;
   background: rgba(104, 56, 236, 0.2);
   backdrop-filter: blur(4.575px);
-  font-family: "BankGothic Md BT";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -222,7 +221,7 @@ input::placeholder {
   font-size: 1rem;
 }
 .heading {
-  font-family: "Bank Gothic", sans-serif;
+  font-family: "BankGothicCMdBT", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 59.5169px;
@@ -232,7 +231,6 @@ input::placeholder {
   color: #ffffff;
 }
 .info {
-  font-family: "BankGothic Lt BT";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
