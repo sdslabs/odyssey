@@ -45,7 +45,7 @@ const Repo = ({ Card }) => {
 };
 
 async function claimIssue(Card, session) {
-  const response = await axios.post("http://localhost:8000/api/claim-issue/", {
+  const response = await axios.post("https://odyssey.iitr.ac.in/backend/api/claim-issue/", {
     access_token: session.accessToken,
     id_token: session.user.id,
     issue: Card.issueUrl,

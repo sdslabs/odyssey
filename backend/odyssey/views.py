@@ -11,7 +11,7 @@ import requests
 class GitHubLogin(SocialLoginView):
     authentication_classes = []
     adapter_class = GitHubOAuth2Adapter
-    callback_url = 'http://localhost:3000'
+    callback_url = 'https//odyssey.iitr.ac.in'
     client_class = OAuth2Client
 
 @csrf_exempt
@@ -19,7 +19,7 @@ def set_custom_user_details(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
         post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
-        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        response = requests.post('https://odyssey.iitr.ac.in/backend/api/github/', data=post_data)
         content = response.json()
         user = CustomUserModel.objects.get(username=content['user']['username'])
         user.name = data['name']
@@ -36,7 +36,7 @@ def get_custom_user_details(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
         post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
-        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        response = requests.post('https://odyssey.iitr.ac.in/backend/api/github/', data=post_data)
         content = response.json()
         user = CustomUserModel.objects.get(username=content['user']['username'])
         serializer = CustomUserModelSerializer(user)
@@ -57,7 +57,7 @@ def claim_issue(request):
         data = JSONParser().parse(request)
         issue = IssueModel.objects.get(issue=data['issue'])
         post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
-        response = requests.post('http://localhost:8000/api/github/', data=post_data)
+        response = requests.post('https://odyssey.iitr.ac.in/backend/api/github/', data=post_data)
         content = response.json()
         issue.assigneeName = content['user']['name']
         issue.assigneeId = content['user']['username']

@@ -18,11 +18,12 @@ const settings = {
         if (account.provider === 'github') {
           try {
             const response = await axios.post(
-              'http://127.0.0.1:8000/api/github/',
+              'https://odyssey.iitr.ac.in/backend/api/github/',
               {
                 access_token: account.access_token,
                 id_token: profile.id,
-              }
+              },
+              {headers:{"Content-Type" : "application/json"}}
             )
   
             const { access_token } = response.data
@@ -51,7 +52,8 @@ const settings = {
       
       return session
     },
-  }
+  },
+  secret: process.env.NEXT_PUBLIC_SECRET,
 }
 
 export default (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res, settings)

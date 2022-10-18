@@ -23,7 +23,7 @@ const Profile = ({ uname, aname, role, eno, contact, email, pfp }) => {
       field: formField ? formField : field,
     };
 
-    axios.post("http://localhost:8000/api/set-user/", data).then(() => {
+    axios.post("https://odyssey.iitr.ac.in/backend/api/set-user/", data, {headers:{"Content-Type" : "application/json"}}).then(() => {
       window.location.reload();
     });
   }
