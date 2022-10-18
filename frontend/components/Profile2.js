@@ -2,6 +2,7 @@ import axios from "axios";
 import { useSession } from "next-auth/react";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import Button from "./Button";
 
 const Profile = ({ uname, aname, role, eno, contact, email, pfp }) => {
   const { data: session } = useSession();
@@ -135,13 +136,13 @@ const Profile = ({ uname, aname, role, eno, contact, email, pfp }) => {
                 value={formEmail}
               />
             </div>
-            <button
-              type="button"
-              className="logout_button"
-              onClick={() => setData()}
+            <div
+              style={{
+                height: "50px",
+              }}
             >
-              Sign Up
-            </button>
+              <Button onClick={() => setData()} text={"Sign Up"} />
+            </div>
           </div>
         )}
       </form>
