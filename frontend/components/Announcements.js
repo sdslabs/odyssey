@@ -1,41 +1,46 @@
 import EventCard from "./EventCard";
-import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-
-const Announcement=({data})=>{
-  function slideLeft(){
-    var slider=document.getElementById('events')
-    if(!slider){
-      return
+const Announcement = ({ data }) => {
+  function slideLeft() {
+    var slider = document.getElementById("events");
+    if (!slider) {
+      return;
     }
-    slider.scrollLeft= slider.scrollLeft - ((document.getElementsByClassName("card")[0].scrollWidth+35)*3)
+    slider.scrollLeft =
+      slider.scrollLeft -
+      (document.getElementsByClassName("card")[0].scrollWidth + 35) * 3;
   }
-   function slideRight(){
-    var slider=document.getElementById('events')
-    if(!slider){
-      return
+  function slideRight() {
+    var slider = document.getElementById("events");
+    if (!slider) {
+      return;
     }
-    slider.scrollLeft= slider.scrollLeft + ((document.getElementsByClassName("card")[0].scrollWidth+35)*3)
+    slider.scrollLeft =
+      slider.scrollLeft +
+      (document.getElementsByClassName("card")[0].scrollWidth + 35) * 3;
   }
-  return(
+  return (
     <div className="announcement">
-      <h1>Announcement</h1>     
+      <h1>Announcement</h1>
 
-      <div className='anouncebox'>
-      <MdChevronLeft onClick={()=>slideLeft()} size={200}/>
-      <div className="events" id="events">
-      {data.map((item)=>{
-        return(
-        <EventCard 
-        date={item}
-        key={item}
-        heading={item}
-        description={item}/>);
-      })}
-      </div>
-      <MdChevronRight onClick={()=>slideRight()} size={200}/>
+      <div className="anouncebox">
+        <MdChevronLeft onClick={() => slideLeft()} size={200} />
+        <div className="events" id="events">
+          {data.map((item, i) => {
+            return (
+              <EventCard
+                date={item.date}
+                key={i}
+                heading={item.title}
+                description={item.description}
+              />
+            );
+          })}
+        </div>
+        <MdChevronRight onClick={() => slideRight()} size={200} />
       </div>
     </div>
   );
-}
-export default Announcement
+};
+export default Announcement;
