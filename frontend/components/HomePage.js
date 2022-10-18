@@ -1,22 +1,34 @@
-import Button from './Button'
+import Button from "./Button";
 import SocialIcons from "./SocialIcons";
-const HomePage = () => {
+const HomePage = ({ refs }) => {
   return (
     <div className="placard">
       <SocialIcons />
+
       <div className="placard-text">
         <div>
-          <h1>Lorem ipsum dolor sit</h1>
+          <h1>OPEN SOURCE ODYSSEY</h1>
         </div>
         <div>
           <p>
-            Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum
-            dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-            ametLorem ipsum dolor sit amet
+            A month long celebration of contributing to open source. Join us and
+            others like you on this journey. get hacking, make pull requests,
+            and win some cool swag!
           </p>
         </div>
         <div>
-          <Button />
+          <Button
+            text={"TIMELINE"}
+            onClick={() => {
+              if (refs && refs.current) {
+                refs.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+              }
+            }}
+          />
         </div>
       </div>
       <div className="rightlane">
@@ -30,5 +42,5 @@ const HomePage = () => {
     </div>
   );
 };
-    
+
 export default HomePage;

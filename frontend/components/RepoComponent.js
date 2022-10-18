@@ -1,7 +1,7 @@
 import { useSession } from "next-auth/react";
 const axios = require("axios").default;
 
-const Repo = ({ Card }) => {
+const Repo = ({ Card, callback }) => {
   const { data: session } = useSession();
   return (
     <div className="repobox">
@@ -29,7 +29,7 @@ const Repo = ({ Card }) => {
               marginLeft: "auto",
               marginTop: "15px",
             }}
-            onClick={() => claimIssue(Card, session)}
+            onClick={() => claimIssue(Card, session).then(() => callback())}
           >
             Claim
           </button>
