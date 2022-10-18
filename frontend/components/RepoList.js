@@ -1,4 +1,5 @@
 import Repo from "./RepoComponent";
+import AboutCard from "./AboutCard";
 
 const ReposToContribute = ({ list, callback }) => {
   return (
@@ -7,6 +8,7 @@ const ReposToContribute = ({ list, callback }) => {
         {list.map((Card, i) => {
           return <Repo Card={Card} key={i} callback={callback} />;
         })}
+        <AboutCard></AboutCard>
       </div>
     </div>
   );
