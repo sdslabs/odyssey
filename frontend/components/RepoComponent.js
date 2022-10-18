@@ -5,13 +5,18 @@ const Repo = ({ Card }) => {
   const { data: session } = useSession();
   return (
     <div className="repobox">
-      <div className="description">
+      <div
+        style={{
+          textAlign: "center",
+          margin: "1rem",
+        }}
+      >
         <h4>
           <b>
             {Card.repoName} - {Card.tag}
           </b>
         </h4>
-        <a href={Card.issueUrl} target="_blank">
+        <a href={Card.issueUrl} target="_blank" rel="noreferrer">
           {Card.issueTitle}
         </a>
       </div>
@@ -29,7 +34,10 @@ const Repo = ({ Card }) => {
             Claim
           </button>
         ) : (
-          <p>Assigned to - {Card.assignee}</p>
+          <>
+            <br />
+            Assigned to - {Card.assignee}
+          </>
         )}
       </div>
     </div>
@@ -37,14 +45,11 @@ const Repo = ({ Card }) => {
 };
 
 async function claimIssue(Card, session) {
-  const response = await axios.post(
-    'http://localhost:8000/api/claim-issue/',
-    {
-      access_token: session.accessToken,
-      id_token: session.user.id,
-      issue: Card.issueUrl,
-    }
-  )
+  const response = await axios.post("http://localhost:8000/api/claim-issue/", {
+    access_token: session.accessToken,
+    id_token: session.user.id,
+    issue: Card.issueUrl,
+  });
 }
 
-export default Repo
+export default Repo;
