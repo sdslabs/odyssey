@@ -25,7 +25,13 @@ const Announcement = ({ data }) => {
       <h1>Announcement</h1>
 
       <div className="anouncebox">
-        <MdChevronLeft onClick={() => slideLeft()} size={200} />
+        <MdChevronLeft
+          onClick={() => slideLeft()}
+          size={50}
+          style={{
+            marginTop: "220px",
+          }}
+        />
         <div className="events" id="events">
           {data.map((item, i) => {
             return (
@@ -38,7 +44,13 @@ const Announcement = ({ data }) => {
             );
           })}
         </div>
-        <MdChevronRight onClick={() => slideRight()} size={200} />
+        <MdChevronRight
+          onClick={() => slideRight()}
+          size={50}
+          style={{
+            marginTop: "220px",
+          }}
+        />
       </div>
     </div>
   );

@@ -140,22 +140,24 @@
   margin: 0;
 }
 
-.anouncebox{
+.anouncebox {
   display: flex;
   flex: row;
+  justify-content: space-between;
 }
-.announcement{
+.announcement {
   margin: 2rem;
-  h1{
+  h1 {
     font-size: 4rem;
   }
 }
 
-.events{
+.events {
   scroll-behavior: smooth;
   overflow-x: hidden;
   display: flex;
   flex: row;
+  width: 90%;
 }
 
 .odysseyimage {
