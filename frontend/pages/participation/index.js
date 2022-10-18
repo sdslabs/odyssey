@@ -35,6 +35,7 @@ export default function Home() {
           issue_number: repoInfo[6],
         }
       );
+      repos = JSON.parse(JSON.stringify(repos));
       repos.push({
         repoName: repoInfo[3],
         tag: repoInfo[4],
@@ -44,7 +45,7 @@ export default function Home() {
         assignee: element.assigneeId,
         issueUrl: element.issue,
       });
-      setCardData(repos);
+      setCardData(JSON.parse(JSON.stringify(repos)));
     });
   };
   useEffect(() => {
@@ -60,7 +61,7 @@ export default function Home() {
       </div>
       <div className="content">
         <SocialIcons />
-        <ReposToContribute list={CardData} />
+        <ReposToContribute list={CardData} callback={fetchRepos} />
       </div>
       <div className="participationB">
         <Info

@@ -2,7 +2,7 @@ import TextDash from "./TextDash";
 import React, { useState } from "react";
 
 const Info = ({ heading, text }) => {
-  const [listVisible, setDivVisible] = useState(false);
+  const [listVisible, setDivVisible] = useState(true  );
   const classNameGenerator = (...classes) => {
     return classes.join(" ");
   };
@@ -13,14 +13,7 @@ const Info = ({ heading, text }) => {
         marginTop: "50px",
       }}
     >
-      <p
-        onClick={() => setDivVisible(!listVisible)}
-        style={{
-          cursor: "pointer",
-        }}
-      >
-        {heading}
-      </p>
+      <p>{heading}</p>
       <div className={classNameGenerator("list1") + " " + listVisible + "list"}>
         {text.map((item, i) => {
           return <TextDash text={item} key={i} />;

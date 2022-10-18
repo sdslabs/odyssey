@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Button = () => {
+const Button = ({ text, onClick }) => {
   const [buttonActive, setButtonActive] = useState(false);
   const classNameGenerator = (...classes) => {
     return classes.join(" ");
@@ -11,11 +11,11 @@ const Button = () => {
       onMouseDown={() => setButtonActive(!buttonActive)}
       onMouseUp={() => setButtonActive(!buttonActive)}
       className={classNameGenerator("btn") + " " + buttonActive}
+      onClick={onClick}
     >
-      LOREM IPSUM
+      {text}
     </button>
   );
 };
 
 export default Button;
-

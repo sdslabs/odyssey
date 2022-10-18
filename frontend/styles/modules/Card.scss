@@ -1,5 +1,83 @@
 .card {
   box-shadow: 0px 0.3rem 1rem 0.15rem rgba(221, 230, 243, 0.25);
+  padding: 0px;
+  background: linear-gradient(
+      90deg,
+      rgba(50, 18, 138, 0.207) 0%,
+      rgba(80, 41, 189, 0.207) 0.01%,
+      rgba(170, 28, 100, 0.237) 58.85%,
+      rgba(233, 69, 96, 0.3) 100%
+    ),
+    linear-gradient(90deg, #1d0f44 0%, #3d0e3d 100%);
+  border-radius: 1rem;
+  border: 0.15rem solid rgba(233, 69, 96, 0.8);
+  box-sizing: border-box;
+  min-width: 363px;
+  font-size: 1.25rem;
+  height: 473px;
+  border-color: #ffffff;
+}
+
+.date {
+  background-color: white;
+  border-bottom-right-radius: 8rem;
+  align-self: flex-start;
+  min-width: 67%;
+  width: max-content;
+  border-top-left-radius: 3rem;
+}
+
+.card__container h5 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0.25rem;
+  line-height: 115.8%;
+  color: #595353;
+  text-transform: uppercase;
+}
+
+.card_content {
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  min-width: 97%;
+}
+
+.card__container h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.375rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 1.25rem;
+  align-self: center;
+  padding-bottom: 2rem;
+}
+
+.card_content::-webkit-scrollbar {
+  width: 7px;
+  inset: 0 3px 0;
+}
+
+.card_content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card_content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.3rem 1rem 0.15rem rgba(221, 230, 243, 0.25);
   /*effects - transition: 0.3s;*/
   background: linear-gradient(
       90deg,
@@ -13,20 +91,6 @@
   width: 22.6875rem;
   height: 29.615625rem;
   border-color: #ffffff;
-}
-
-.card__container {
-  padding: 1.8125rem;
-}
-
-.card__container h3 {
-  text-align: center;
-  font-size: 1.75rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 115.8%;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .card__container h4 {
