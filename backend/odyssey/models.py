@@ -63,3 +63,12 @@ class IssueModel(models.Model):
 
     class Meta:
         verbose_name = 'Issue'
+
+class AnnouncementModel(models.Model):
+    title = models.CharField(max_length = 100)
+    description = models.CharField(max_length = 500)
+    date = models.DateField()
+
+    class Meta:
+        verbose_name = 'Announcement'
+        

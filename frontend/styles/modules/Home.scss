@@ -140,6 +140,26 @@
   margin: 0;
 }
 
+.anouncebox {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+.announcement {
+  margin: 2rem;
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+.events {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  display: flex;
+  flex: row;
+  width: 90%;
+}
+
 .odysseyimage {
   width: fit-content;
   margin-right: 20%;
