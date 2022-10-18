@@ -110,7 +110,7 @@
 .placard {
   display: flex;
   flex-direction: row;
-  margin: auto;
+  padding-left: 3%;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -119,9 +119,9 @@
 
 .placard-text {
   width: 60%;
+  padding-left: 5%;
 }
 .placard-text h1 {
-  font-family: BankGothic Md BT;
   font-size: 76px;
   font-weight: 400;
   line-height: 74px;
@@ -129,7 +129,7 @@
   text-align: left;
 }
 .placard-text p {
-  font-family: BankGothic Lt BT;
+  font-family: "BankGothicCLtBT";
   font-size: 20px;
   font-weight: 400;
   line-height: 27px;
@@ -167,7 +167,6 @@
     font-size: 4rem;
     margin-left: 9%;
     text-transform: uppercase;
-    font-family: BankGothic Md BT;
     font-size: 60px;
     font-weight: 400;
     line-height: 58px;
