@@ -1,27 +1,55 @@
-import PropTypes from 'prop-types'
+import { useSession } from "next-auth/react";
+const axios = require("axios").default;
 
-const Repo=( {Card} )=>{
-    return (
-        <div class="repobox">
-            <div class="description">
-            <h4><b>{Card.repoName} - {Card.tag}</b></h4>
-              <p>{Card.issueTitle}</p>
-            </div>
-            <div class="mentor">
-                Mentored by - {Card.mentor}
-                {Card.claim == false ? <button>Read More</button> : <p>Assigned to - {Card.assignee}</p>}
-            </div>
-        </div>
-    )
+const Repo = ({ Card }) => {
+  const { data: session } = useSession();
+  return (
+    <div className="repobox">
+      <div
+        style={{
+          textAlign: "center",
+          margin: "1rem",
+        }}
+      >
+        <h4>
+          <b>
+            {Card.repoName} - {Card.tag}
+          </b>
+        </h4>
+        <a href={Card.issueUrl} target="_blank" rel="noreferrer">
+          {Card.issueTitle}
+        </a>
+      </div>
+      <div className="mentor">
+        Mentored by - {Card.mentor}
+        {Card.claim == false ? (
+          <button
+            className="button"
+            style={{
+              marginLeft: "auto",
+              marginTop: "15px",
+            }}
+            onClick={() => claimIssue(Card, session)}
+          >
+            Claim
+          </button>
+        ) : (
+          <>
+            <br />
+            Assigned to - {Card.assignee}
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+async function claimIssue(Card, session) {
+  const response = await axios.post("http://localhost:8000/api/claim-issue/", {
+    access_token: session.accessToken,
+    id_token: session.user.id,
+    issue: Card.issueUrl,
+  });
 }
 
-/* Repo.defaultProp={
-    description:"Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum ",
-    mentor: "VANSH UPPAl"
-}
-
-Repo.defaultProp={
-    description: PropTypes.string,
-    mentor: PropTypes.string
-} */
-export default Repo
+export default Repo;

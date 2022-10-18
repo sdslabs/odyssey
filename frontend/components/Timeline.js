@@ -90,12 +90,12 @@ const Timeline = () =>
                       background: linear-gradient(90deg, rgba(80,41,189,0.69) 0%, rgba(129,41,82,0.79) 59%, rgba(233,69,96,1) 100%) ;
                       content: '';
                       position: absolute;
-                      top: calc(50% - 12.5px);
+                      top: calc(50% - 2.3rem);
                       left: 7%;
                       width: ${100 * computeTimelineLength(100) * 0.78}%;
-                      height: 20px;
+                      height: 1.25rem;
                       z-index: 10;
-                      border-radius: 48.41px;
+                      border-radius: 3.026rem;
                     }
                   `}</style>
             </div>

@@ -1,10 +1,9 @@
 import NextAuth from 'next-auth'
 import GithubProvider from 'next-auth/providers/github'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { InitOptions } from 'next-auth'
 import axios from 'axios'
 
-const settings: InitOptions = {
+const settings = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID,

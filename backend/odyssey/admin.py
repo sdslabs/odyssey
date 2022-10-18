@@ -1,3 +1,5 @@
 from django.contrib import admin
+from odyssey.models import IssueModel, CustomUserModel
 
-# Register your models here.
+admin.site.register(IssueModel)
+admin.site.register(CustomUserModel)
