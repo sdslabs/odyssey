@@ -39,11 +39,8 @@ const AboutTop = () => {
         </div>
       </div>
       <div className="rightlane">
-        <div className="rightlogo">
-          <img src="/images/logo.svg" alt="logo" />
-        </div>
         <div className="odysseyimage">
-          <img src="/images/home-illus.svg" alt="Odyssey" />
+          <img src="/images/about_icon.svg" alt="abouticon" />
         </div>
       </div>
     </div>

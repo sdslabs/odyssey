@@ -32,9 +32,6 @@ const HomePage = ({ refs }) => {
         </div>
       </div>
       <div className="rightlane">
-        <div className="rightlogo">
-          <img src="/images/logo.svg" alt="logo" />
-        </div>
         <div className="odysseyimage">
           <img src="/images/home-illus.svg" alt="Odyssey" />
         </div>
