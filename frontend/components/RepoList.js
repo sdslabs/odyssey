@@ -8,7 +8,7 @@ const ReposToContribute = ({ list, callback }) => {
         {list.map((Card, i) => {
           return <Repo Card={Card} key={i} callback={callback} />;
         })}
-        <AboutCard></AboutCard>
+        <AboutCard />
       </div>
     </div>
   );
