@@ -144,6 +144,10 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  :hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+  }
 }
 .placard-icons-instagram {
   width: 2rem;
