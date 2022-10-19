@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
-@import url("https://db.onlinewebfonts.com/c/aa28c4a888c2892a838deba6df557423?family=BankGothicCLtBT");
-@import url("https://db.onlinewebfonts.com/c/702bb7295ee36b0f15acddf12f131188?family=BankGothicCMdBT");
 @import "./modules/button";
 @import "./modules/Home.scss";
 @import "./modules/timeline";
@@ -17,12 +15,22 @@
 @import "./components/LoginSignupButton.scss";
 @import "./components/signoutButton.scss";
 
+@font-face {
+  font-family: BankGothicLtBT;
+  src: url("./fonts/BankGothicLtBTLight.ttf");
+}
+
+@font-face {
+  font-family: BankGothicMdBT;
+  src: url("./fonts/BankGothicMediumBT.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  font-family: "BankGothicCMdBT";
+  font-family: BankGothicLtBT;
   color: azure;
 }
 
@@ -221,7 +229,7 @@ input::placeholder {
   font-size: 1rem;
 }
 .heading {
-  font-family: "BankGothicCMdBT", sans-serif;
+  font-family: BankGothicMdBT, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 59.5169px;
