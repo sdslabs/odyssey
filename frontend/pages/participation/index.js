@@ -22,7 +22,7 @@ export default function Home() {
       auth: session.accessToken,
     });
     const { data } = await axios.get(
-      `https://odyssey.iitr.ac.in/backend/api/get-all-issues/`
+      `http://localhost:8000/api/get-all-issues/`
     );
     let repos = [];
     data.forEach(async (element) => {

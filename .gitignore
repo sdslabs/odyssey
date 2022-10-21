@@ -48,7 +48,7 @@ atlassian-ide-plugin.xml
 # Python # 
 *.py[cod] 
 *$py.class 
-/backend/backend/secrets.py
+secrets.py
 
 # Distribution / packaging 
 .Python build/ 
@@ -68,7 +68,6 @@ wheels/
 *.egg 
 *.manifest 
 *.spec 
-/backend/static/
 
 # Installer logs 
 pip-log.txt 

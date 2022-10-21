@@ -19,7 +19,7 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   const fetchUserData = async () => {
-    const response = await axios.post('https://odyssey.iitr.ac.in/backend/api/get-user/', { access_token: session.accessToken, id_token: session.user.id }, {headers:{"Content-Type" : "application/json"}});
+    const response = await axios.post('http://localhost:8000/api/get-user/', { access_token: session.accessToken, id_token: session.user.id });
     return response
   }
 
