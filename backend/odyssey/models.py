@@ -49,7 +49,8 @@ class CustomUserModel(AbstractBaseUser, PermissionsMixin):
     updated_on = models.DateTimeField(auto_now = True)
 
     objects = CustomUserModelManager()
-
+    assignedIssue = models.ForeignKey('IssueModel', null = True, blank = True, on_delete = models.SET_NULL)
+    completedIssues = models.ManyToManyField('IssueModel', related_name = 'completedIssues', blank = True)
     class Meta:
         verbose_name = 'Custom User'
 

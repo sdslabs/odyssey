@@ -52,6 +52,15 @@ def get_all_issues(request):
     return JsonResponse({'message': 'error'}, status=400)
 
 @csrf_exempt
+def get_issue(request):
+    if request.method == 'GET':
+        issues = IssueModel.objects.get(issue=request.GET['issue'])
+        serializer = IssueModelSerializer(issues, many=False)
+        return JsonResponse(serializer.data, safe=False, status=200)
+    return JsonResponse({'message': 'error'}, status=400)
+
+
+@csrf_exempt
 def get_announcements(request):
     if request.method == 'GET':
         announcements = AnnouncementModel.objects.all()
@@ -67,9 +76,13 @@ def claim_issue(request):
         post_data = {'access_token': data['access_token'], 'id_token': data['id_token']}
         response = requests.post('http://localhost:8000/api/github/', data=post_data)
         content = response.json()
-        issue.assigneeName = content['user']['name']
-        issue.assigneeId = content['user']['username']
-        issue.save()
+        user = CustomUserModel.objects.get(username=content['user']['username'])
+        if(user.assignedIssue is None):
+            issue.assigneeName = content['user']['name']
+            issue.assigneeId = content['user']['username']
+            issue.save()
+            user.assignedIssue = issue
+            user.save()
         return JsonResponse({'message': 'success'}, status=200)
     return JsonResponse({'message': 'error'}, status=400)
     
