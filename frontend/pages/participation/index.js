@@ -3,7 +3,6 @@ import Resources from "../../components/Resources";
 import Searchbar from "../../components/Searchbar";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { Octokit, App } from "octokit";
 import Info from "../../components/Info";
 import SocialIcons from "../../components/SocialIcons";
 const axios = require("axios").default;
@@ -18,28 +17,17 @@ export default function Home() {
     "The top 30 contributors on the leaderboard will receive T-shirts and swag, so try to get as many pull requests merged, as you can!",
   ];
   const fetchRepos = async () => {
-    const octokit = new Octokit({
-      auth: session.accessToken,
-    });
     const { data } = await axios.get(
       `http://localhost:8000/api/get-all-issues/`
     );
     let repos = [];
     data.forEach(async (element) => {
       var repoInfo = element.issue.split("/");
-      let info = await octokit.request(
-        "GET /repos/{owner}/{repo}/issues/{issue_number}",
-        {
-          owner: repoInfo[3],
-          repo: repoInfo[4],
-          issue_number: repoInfo[6],
-        }
-      );
       repos = JSON.parse(JSON.stringify(repos));
       repos.push({
         repoName: repoInfo[3],
         tag: repoInfo[4],
-        issueTitle: info.data.title,
+        issueTitle: element.issueName,
         mentor: element.mentorId,
         claim: element.assigneeId ? true : false,
         assignee: element.assigneeId,
@@ -49,7 +37,8 @@ export default function Home() {
     });
   };
   useEffect(() => {
-    if (session) fetchRepos();
+    console.log(session);
+    fetchRepos();
   }, [session]);
   return (
     <>

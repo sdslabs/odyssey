@@ -56,6 +56,7 @@ class CustomUserModel(AbstractBaseUser, PermissionsMixin):
 
 class IssueModel(models.Model):
     issue = models.CharField(max_length = 100, primary_key = True, editable = True)
+    issueName = models.CharField(max_length = 100, null = True, blank = True)
     mentorName = models.CharField(max_length = 50)
     mentorId = models.CharField(max_length = 32)
     assigneeName = models.CharField(max_length = 50, null = True, blank = True)
